@@ -18,7 +18,7 @@ str   r3, [sp, #0x4]
 ldr   r0, =BATTLE_ANIMATION_NUMBERS_FLAG
 lsl   r0, #0x5
 lsr   r0, #0x5
-ldr   r3, =CheckEventId
+ldr   r3, =CheckFlag
 bl    GOTO_R3
 cmp   r0, #0x0
 bne   End
@@ -58,7 +58,7 @@ bne   End
     @ Start proc which will put digits in VRAM.
     ldr   r0, =BAN_Proc_DelayDigits
     mov   r1, #0x3
-    ldr   r3, =ProcStart
+    ldr   r3, =SpawnProc
     bl    GOTO_R3
     strh  r7, [r0, #0x2A]   @ Damage/heal.
     mov   r7, r0
@@ -196,9 +196,9 @@ bl    GOTO_R12
 mov   r5, r0
 
 @ Start gProc_efxDamageMojiEffectOBJ
-ldr   r0, =gProc_efxDamageMojiEffectOBJ
+ldr   r0, =ProcScr_efxDamageMojiEffectOBJ
 mov   r1, #0x3
-ldr   r3, =ProcStart
+ldr   r3, =SpawnProc
 bl    GOTO_R3
 mov   r6, r0
 str   r4, [r6, #0x5C]     @ AIS.

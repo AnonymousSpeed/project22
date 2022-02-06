@@ -26,15 +26,15 @@ all: $(ALL_FILES)
 
 # TODO: add skill system's very own CLib
 
-LYN_REFERENCE :=
+LYN_REFERENCE := CLib/reference/fe8-us.o
 
 # Setting C/ASM include directories up
-INCLUDE_DIRS :=
+INCLUDE_DIRS := CLib/include
 INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)")
 
 # setting up compilation flags
 ARCH := -mcpu=arm7tdmi -mthumb -mthumb-interwork
-CC_FLAGS := $(ARCH) $(INCFLAGS) -Wall -Os -mtune=arm7tdmi -ffreestanding -fomit-frame-pointer -mlong-calls
+CC_FLAGS := $(ARCH) $(INCFLAGS) -Wall -O2 -mtune=arm7tdmi -ffreestanding -fomit-frame-pointer -mlong-calls
 AS_FLAGS := $(ARCH) $(INCFLAGS)
 
 # defining dependency flags

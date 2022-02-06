@@ -28,14 +28,14 @@ bgt   Plus
 Plus:
 
 @ Load palette.
-ldr   r1, =gPaletteBuffer+0x2A0
+ldr   r1, =gPal+0x2A0
 sub   r2, r4, #0x1
 neg   r2, r2
 lsl   r2, #0x5
 add   r1, r2
 mov   r2, #0x8
 swi   #0xC                @ CpuFastSet
-ldr   r3, =EnablePaletteSync
+ldr   r3, =EnablePalSync
 bl    GOTO_R3
 
 @ Put minus or plus in OBJ VRAM.

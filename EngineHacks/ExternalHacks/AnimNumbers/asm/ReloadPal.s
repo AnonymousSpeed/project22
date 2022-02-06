@@ -15,12 +15,12 @@ add   r0, r2
 sub   r1, #0x1
 neg   r1, r1
 lsl   r1, #0x5
-ldr   r2, =gPaletteBuffer+0x2A0
+ldr   r2, =gPal+0x2A0
 add   r1, r2
 mov   r2, #0x8
 swi   #0xC              @ CpuFastSet
 
-ldr   r3, =EnablePaletteSync
+ldr   r3, =EnablePalSync
 bl    GOTO_R3
 
 @ Vanilla stuff overwritten by hook.

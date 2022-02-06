@@ -113,7 +113,7 @@ ValidLevel:
 ldrh r0, [r4, #FlagShort]
 cmp r0, #0 
 beq ValidFlag
-blh CheckEventId
+blh CheckFlag
 cmp r0, #1 
 bne ReturnFalse
 

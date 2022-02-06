@@ -14,7 +14,7 @@ ldrh  r0, [r7, #0xE]
 sub   r0, #0x1
 lsl   r0, #0x1
 add   r0, r5
-ldr   r3, =GetBattleAnimRoundTypeFlags
+ldr   r3, =GetBattleAnimHitFlags
 bl    GOTO_R3
 ldr   r1, =0x800
 tst   r0, r1
@@ -66,14 +66,14 @@ cmp   r0, #0
 bne   End
 
   @ Start SkillProcDisplay (prefix SPD) proc.
-  ldr   r0, =gProc_ekrGauge
-  ldr   r3, =ProcFind
+  ldr   r0, =ProcScr_ekrGauge
+  ldr   r3, =FindProc
   bl    GOTO_R3
   cmp   r0, #0x0
   beq   L2                      @ This proc should exist, so this shouldn't happen.
     mov   r1, r0
     ldr   r0, =SPD_main_Proc
-    ldr   r3, =ProcStart
+    ldr   r3, =SpawnProc
     bl    GOTO_R3
     mov   r1, #0x29
     strb  r4, [r0, r1]            @ +0x29, byte, is procced skill.

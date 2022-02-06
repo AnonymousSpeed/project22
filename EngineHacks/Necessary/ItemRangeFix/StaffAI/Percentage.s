@@ -1,5 +1,5 @@
 .thumb
-.include "_ItemAIDefinitions.s"
+.include "_ItemAIDefinitions.h.s"
 
 @arguments:
 	@r0 = unit pointer
