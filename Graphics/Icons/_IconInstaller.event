@@ -38,6 +38,8 @@
 	SetItemIcon(WoDao)
 	#incext Png2Dmp "1.Swords/WoDao.png"
 
+
+
 	SetItemIcon(BronzeLance)
 	#incext Png2Dmp "2.Lances/BronzeLance.png"
 
@@ -83,6 +85,8 @@
 	SetItemIcon(Spear)
 	#incext Png2Dmp "2.Lances/Spear.png"
 
+
+
 	SetItemIcon(BronzeAxe)
 	#incext Png2Dmp "3.Axes/BronzeAxe.png"
 
@@ -122,6 +126,8 @@
 	SetItemIcon(Tomahawk)
 	#incext Png2Dmp "3.Axes/Tomahawk.png"
 
+
+
 	SetItemIcon(BronzeBow)
 	#incext Png2Dmp "4.Bows/BronzeBow.png"
 
@@ -158,6 +164,8 @@
 	SetItemIcon(RapierBow)
 	#incext Png2Dmp "4.Bows/RapierBow.png"
 
+
+
 	SetItemIcon(Thunder)
 	#incext Png2Dmp "5.Thunder/Thunder.png"
 
@@ -175,6 +183,8 @@
 
 	SetItemIcon(Paralysis)
 	#incext Png2Dmp "5.Thunder/Paralysis.png"
+
+
 
 	SetItemIcon(Fire)
 	#incext Png2Dmp "6.Fire/Fire.png"
@@ -194,6 +204,8 @@
 	SetItemIcon(Ragnarok)
 	#incext Png2Dmp "6.Fire/Ragnarok.png"
 
+
+
 	SetItemIcon(Wind)
 	#incext Png2Dmp "7.Wind/Wind.png"
 
@@ -211,6 +223,8 @@
 
 	SetItemIcon(ValorousGale)
 	#incext Png2Dmp "7.Wind/ValorousGale.png"
+
+
 
 	SetItemIcon(Soothe)
 	#incext Png2Dmp "8.Staves/Soothe.png"
@@ -265,6 +279,8 @@
 
 	SetItemIcon(Unlock)
 	#incext Png2Dmp "8.Staves/Unlock.png"
+
+
 
 	SetItemIcon(AngelicRobe)
 	#incext Png2Dmp "9.Items/AngelicRobe.png"
