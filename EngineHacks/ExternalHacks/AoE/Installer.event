@@ -73,33 +73,12 @@ Animation_IDByte, #15
 #define DepleteItemBool 0x20
 #define UsableOnlyIfStationaryBool 0x40 
 
+#define ItemAoEEntry(itemID,config,mgt,minRange,maxRange,rangeMask,animID) "BYTE 0 0 0 ItemID 0 0 0 0 0 config 0 0 mgt mgt minRange maxRange rangeMask animID"
 
 ALIGN 4 
 AoE_Table:
-// Entry 
-BYTE 0 0 0 0
-BYTE 0 0 0 0 // Always usable by anyone 
-BYTE 0 FriendlyFireBool|MagBasedBool
-BYTE 5 5 // damage range 
-BYTE 0 2 // Attack range 
-BYTE 0 1 // Index of RangeMask, Animation
-
-
-// Entry 
-BYTE 0 0 0 0 
-BYTE 0 0 0 0 // Always usable by anyone 
-BYTE 0 FriendlyFireBool|MagBasedBool|HealBool
-BYTE 5 5 // damage range 
-BYTE 1 3 // Attack range 
-BYTE 1 2 // Index of RangeMask, Animation
-
-// Entry 
-BYTE 0 0 0 0 
-BYTE 0 0 0 0 // Always usable by anyone 
-BYTE 0 FriendlyFireBool
-BYTE 5 10 // damage range 
-BYTE 2 4 // Attack range 
-BYTE 2 3 // Index of RangeMask, AnimationALL,
+ItemAoEEntry(ChainVolt,MagBasedBool|HitResBool|DepleteItemBool,6,1,3,0,0)
+ItemAoEEntry(Ragnarok,MagBasedBool|HitResBool|DepleteItemBool,18,1,2,1,1)
 AoE_TableTerminator
 
 
