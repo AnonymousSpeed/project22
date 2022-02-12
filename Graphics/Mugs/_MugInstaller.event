@@ -1,1 +1,12 @@
+//NOTE: refer to top-left of portrait image for palette order!
+
+// PORTRAITS
+
+portrait02:
+#incext PortraitFormatter "p-02-esme.png"
+setMugEntry(0x2, portrait02, 3, 5, 3, 3)
+
+
+// CLASS CARDS
+
 #include "ClassCards/_ClassCards.event"
