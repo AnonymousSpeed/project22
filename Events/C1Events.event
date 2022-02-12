@@ -1,7 +1,4 @@
-﻿//Made by Camtech075 of SerenesForest
-//Modified by Nintenlord
-
-#include EAstdlib.event
+﻿#include EAstdlib.event
 
 EventPointerTable(0x07,ThisChapter)
 
@@ -19,7 +16,6 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 END_MAIN
@@ -34,6 +30,15 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatAll(EndingScene)
 //AFEV 0x8 PrepAIChange 0x01 //Not sure what you were trying to do here, explain this to me and I will implement this in a modern form that's easier for people these days to debug/understand
+//explanation:
+//Player fights boss, boss says "argh! what are you waiting for?! get on them already!!",
+//and the boss quote runs the event PrepAIChange which sets a temporary flag that is checked for at
+//the beginning of each player phase (by the turn event AIChangeifBossFought) starting from phase 2.
+//If this flag is true, enemies' AI changes to 0 (pursue) and the flag is set to false so the event will not run again.
+//This construction is necessary as opposed to just making the boss quote do the CHAI directly because changing AI
+//in the middle of a turn could potentially cheaply catch the player off guard, especially if moving a unit to fight the boss
+//was the last thing they did in their turn.
+//There is probably some more elegant way of implementing this that I'm not aware of. I'm used to having to bootstrap from FE7.
 END_MAIN
 
 Dunno:
@@ -57,15 +62,18 @@ UNIT
 
 
 //Let me know what we want to call these enemies and I'll set up any definitions we need.
+//note: in-world they are bandits; generally I will refer to generic bad guys by byte rather than name
+//because e.g. 0x66 is more descriptive ("got it; it's that character slot in particular") than Bandit1 ("it's... one of many bandits, huh")
+//boss character deets pending
 Enemies:
-UNIT 0x68 Soldier 0x01 Level(4, Enemy, 0) [10,0] 0x00 0x00 0x0 0x00 [Horseslayer] AttackInRangeAI
+UNIT 0x68 Deserter 0x01 Level(4, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [IronPike] AttackInRangeAI
 UNIT 0x66 Brigand 0x01 Level(3, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT 0x66 Mercenary 0x01 Level(3, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
-UNIT 0x66 Soldier 0x01 Level(2, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
 UNIT 0x66 Archer 0x01 Level(2, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI
 UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [7,8] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
 UNIT 0x66 Mercenary 0x01 Level(1, Enemy, 0) [3,10] 0x00 0x00 0x0 0x00 [IronSword] PursueWithoutHeedAI
-UNIT 0x66 Soldier 0x01 Level(2, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
 UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [12,9] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT
 
@@ -77,9 +85,8 @@ ENUN
 ENDA
 
 Ch1Village:
-VillageEventItem(C1VillageText,Village,Vulnerary)
+VillageEventItem(C1VillageText,Village,IronBlade)
 
 EndingScene:
 MoveToChapter(1)
 ENDA
-
