@@ -1,3 +1,4 @@
 #include "ClassText.txt"
 #include "ItemText.txt"
+#include "StaffText.txt"
 #include "Chapter/C1.txt"

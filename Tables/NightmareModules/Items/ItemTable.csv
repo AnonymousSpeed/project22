@@ -83,7 +83,7 @@ Silence,SilenceName,SilenceDesc,0x4b4,80,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10
 Berserk,BerserkName,BerserkDesc,0x4b5,81,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,400,BRank,Berserk,BerserkEffectID,NoEffect,5,0x0,"ItemStatus(BerserkStatusID,5)",0x0
 Slow,SlowName,SlowDesc,0x4b6,82,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,500,BRank,Slow,NoEffectID,NoEffect,5,0x0,0x0,0x0
 Barrier,BarrierName,BarrierDesc,0x4b7,83,Staves,IsStaff,0x0,0x0,10,0,100,0,0,0x11,600,CRank,Barrier,BarrierEffectID,NoEffect,4,0x0,0x0,0x0
-LightRune,LightRuneName,LightRuneDesc,0x4b8,84,Staves,IsStaff,0x0,0x0,10,0,100,0,0,0x15,1500,CRank,LightRune,NoEffectID,NoEffect,4,0x0,0x0,0x0
+LightRune,LightRuneName,LightRuneDesc,0x4b8,84,Staves,IsStaff,0x0,0x0,10,0,100,0,0,0x15,1500,CRank,LightRune,LightRuneEffectID ,NoEffect,4,0x0,0x0,0x0
 Warp,WarpName,WarpDesc,0x4b9,85,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,600,ARank,Warp,WarpEffectID,NoEffect,7,0x0,0x0,0x0
 Rescue,RescueName,RescueDesc,0x4ba,86,Staves,IsStaff,0x0,0x0,10,0,100,0,0,0x10,100,BRank,Rescue,RescueEffectID,NoEffect,7,0x0,0x0,0x0
 Swarp,SwarpName,SwarpDesc,0x4bb,87,Staves,IsStaff,0x0,0x0,10,0,100,0,0,0x10,600,CRank,Swarp,NoEffectID,NoEffect,7,0x0,0x0,0x0
