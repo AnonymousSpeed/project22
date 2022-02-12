@@ -2,9 +2,13 @@
 @ .include "_ItemEffectDefinitions.s"
 .include "../../_ItemEffectDefinitions.h.s"
 
+.equ GetChapterEventDataPointer, 0x80346B0
 @add check for event ids
 .equ ChestCashEvent, OffsetList + 0x0
 .equ ChestItemEvent, OffsetList + 0x4
+
+.equ MemorySlots, 0x030004B8
+.equ MemorySlot3, MemorySlots + (0xC)
 
 push 	{r4-r7,lr}
 @mov 	r4, r0
@@ -14,13 +18,13 @@ mov 	r0, #0x13
 ldsb 	r4, [r3, r0]
 mov 	r0, #0x14
 ldsb 	r5, [r3, r0]
-ldr 	r7, memoryslots
-mov 	r0, #0x3
-lsl 	r0, r0, #0x2
-add 	r7, r0
+ldr 	r7, =MemorySlot3
+@ mov 	r0, #0x3
+@ lsl 	r0, r0, #0x2
+@ add 	r7, r0
 ldr 	r0, =gChapterData
 ldrb 	r0, [r0, #0xE]
-_blh #0x80346B0 @return pointer to chapter events
+_blh GetChapterEventDataPointer @return pointer to chapter events
 ldr 	r6, [r0, #0x8]
 
 @check all chest events for one on the current tile
@@ -60,7 +64,7 @@ b HasEvent
 
 ChestEvent:
 ldr 	r0, [r6,#0x4]
-mov 	r1, #0xFF
+ldrh 	r1, =#0xFFFF
 cmp 	r0, r1
 blt ChestHasItem	@check if chest has an item
 
@@ -94,7 +98,7 @@ pop 	{r3}
 bx 	r3
 .ltorg
 .align
-memoryslots:
-.long 0x030004B8
+@ memoryslots:
+@ .long 
 
 OffsetList:
