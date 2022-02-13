@@ -1,0 +1,6 @@
+## ItemMenuGrayText
+This item can[.][NL]
+not be selected.[.][X]
+
+## UnlockHelpText
+Select door or chest to open.[X]
