@@ -2,3 +2,6 @@
 {
 #include "C1Events.event"
 }
+{
+#include "C7Events.event"
+}
