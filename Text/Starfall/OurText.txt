@@ -2,4 +2,4 @@
 #include "UnitText.txt"
 #include "ItemText.txt"
 #include "StaffText.txt"
-#include "Chapter/C1.txt"
+#include "Chapter/ChapterText.txt"

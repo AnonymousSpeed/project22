@@ -31,7 +31,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatAll(EndingScene)
+DefeatBoss(EndingScene)
 //AFEV 0x8 PrepAIChange 0x01 //Not sure what you were trying to do here, explain this to me and I will implement this in a modern form that's easier for people these days to debug/understand
 //explanation:
 //Player fights boss, boss says "argh! what are you waiting for?! get on them already!!",
