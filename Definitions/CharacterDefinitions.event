@@ -3,4 +3,9 @@
 #define Oldrik 0x3
 #define Baeric 0x4
 #define Basren 0x5
+#define Neritas 0x6
+#define Vulture 0x8
+#define Georgios 0x9
 
+#define C2Boss 0x46
+#define C2Generics 0x67 

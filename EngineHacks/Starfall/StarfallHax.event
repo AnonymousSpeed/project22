@@ -7,3 +7,6 @@
 
 #include "Hardcoding.event"
 
+#include "NewCalcs/NewCalcs.event"
+
+#include "CustomItems/_CustomItemSetup.event"

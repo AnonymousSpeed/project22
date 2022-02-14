@@ -1,0 +1,121 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0xD,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+END_MAIN
+ALIGN 32 
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Vendor(Ch2Vendor,7,9)
+Armory(Ch2Armory,10,8)
+Village(0x11,Village1,17,15)
+END_MAIN
+
+//Label Location Events
+//need to setup tile changes on map
+Village1:
+VillageEventItem(C2VillageText,Village,RedGem)
+
+//We forgot to put keys in item table, put back later
+Ch2Vendor:
+SHLI Wind Fire Thunder Soothe Heal Vulnerary //DoorKey ChestKey
+
+Ch2Armory:
+SHLI BronzeSword BronzeLance BronzeAxe BronzeBow 
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+AREA 0xA PureWaterDesertTreasure [1, 1] [1, 1] // 100% chance to get PureWater if wait in space 
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [16,1] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Oldrik LanceRider 0x00 Level(1, Ally, 0) [17,0] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0x00 Level(1, Ally, 0) [17,1] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0x01 Level(1, Ally, 0) [18,2] 0x00 0x00 0x0 0x00 [IronBow, IronLongbow] NoAI
+UNIT
+
+NewPlayers:
+UNIT Neritas AxeRider Esme Level(1,Ally,False) [1,2] 0x0 0x0 0x0 0x0 [BronzeAxe] NoAI
+UNIT Vulture Cleric Esme Level(1,Ally,False) [0,3] 0x0 0x0 0x0 0x0 [Soothe,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary Esme Level(1,Ally,False) [3,3] 0x0 0x0 0x0 0x0 [IronBlade] NoAI
+UNIT
+
+EnemyUnits:
+UNIT C2Boss WindMage 0 Level(5,Enemy,False) [3,16] 0x0 0x0 0x0 0x0 [Wind,GoddessIcon] AttackInRangeAI // stealable
+UNIT C2Generics Brigand   C2Boss Level(1,Enemy,True) [3,17] 0x0 0x0 0x0 0x0 [BronzeAxe] BrigandAI // don't know what this is called - attack village but will prioritize player over village
+UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [2,13] 0x0 0x0 0x0 0x0 [BronzeLance] TwoActionAI
+UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [3,13] 0x0 0x0 0x0 0x0 [BronzeLance] TwoActionAI
+UNIT C2Generics Myrmidon   C2Boss Level(1,Enemy,True) [3,14] 0x0 0x0 0x0 0x0 [T1KillerSword,RedGem] TwoActionAI
+UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [3,7] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
+UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [4,8] 0x0 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [0,9] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
+UNIT C2Generics FireMage   C2Boss Level(1,Enemy,True) [3,11] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [BronzeBow] TwoActionAI
+
+EnemyUnits2:
+UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [12,3] 0x0 0x0 0x0 0x0 [IronPoleaxe] TwoActionAI
+UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [13,4] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
+UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [16,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
+UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [18,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
+UNIT C2Generics Mercenary   C2Boss Level(1,Enemy,True) [13,11] 0x0 0x0 0x0 0x0 [BronzeSword] TwoActionAI
+UNIT C2Generics Mercenary   C2Boss Level(1,Enemy,True) [15,4] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
+UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [19,11] 0x0 0x0 0x0 0x0 [BronzeBow] TwoActionAI
+UNIT C2Generics FireMage   C2Boss Level(1,Enemy,True) [10,16] 0x0 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [7,12] 0x0 0x0 0x0 0x0 [BronzeBow] AttackInRangeAI
+UNIT C2Generics Mercenary   C2Boss Level(1,Enemy,True) [9,9] 0x0 0x0 0x0 0x0 [BronzeSword] TwoActionAI
+UNIT
+
+PureWaterDesertTreasure:
+GiveItem(PureWater,0xFFFF)
+ENDA
+
+BeginningScene:
+LOAD2 0x1 Units
+ENUN
+LOAD1 0x1 NewPlayers
+ENUN
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 EnemyUnits2
+ENUN
+ENDA
+
+EndingScene:
+MoveToChapter(0x2)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

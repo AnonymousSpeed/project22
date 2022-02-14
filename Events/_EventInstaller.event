@@ -1,7 +1,14 @@
+//defining common macros, please put them all here
+#define ChangeAI(UnitID, AI1, AI2) "SVAL s1 AI2 << 8 | AI1; CHAI UnitID"
+#define TwoActionAI [0x0C,0x0]
+#define GiveItem(Item,Character) "CALL $591F40 ; SVAL 0x3 Item ; GIVEITEMTO Character"
+
 #include "WorldMapEvents.event"
+#include "BattleEvents.event"
 {
 #include "C1Events.event"
 }
 {
 #include "C7Events.event"
+#include "C2Events.event"
 }

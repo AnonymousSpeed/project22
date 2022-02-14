@@ -1,0 +1,14 @@
+## EsmeName
+Esme[X]
+
+## SolominName
+Solomin[X]
+
+## OldrikName
+Oldrik[X]
+
+## BaericName
+Baeric[X]
+
+## BasrenName
+Basren[X]

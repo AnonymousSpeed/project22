@@ -122,7 +122,7 @@
 		POIN UseEffectAnimTable SpellAssociationTable
 	
 	//for use space where tables used to be to put stuff in bl range
-	ORG $28E80 //$288A8
+	ORG $28E90 //$288A8
 		EffectJumpTable:
 		SHORT 0x4B03	//ldr r3, Item_GetStat_EffectID
 		SHORT 0x2214	//mov r2, #0x14
