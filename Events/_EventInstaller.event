@@ -1,4 +1,9 @@
+//defining common macros, please put them all here
+#define ChangeAI(UnitID, AI1, AI2) "SVAL s1 AI2 << 8 | AI1; CHAI UnitID"
+
+
 #include "WorldMapEvents.event"
+#include "BattleEvents.event"
 {
 #include "C1Events.event"
 }

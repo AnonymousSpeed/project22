@@ -1,3 +1,9 @@
 ## C1VillageText
 [MidRight][LoadFace][0x01][0x01]
 Debug[A][X]
+
+## C1BossBattleQuote
+[OpenMidRight][LoadFace][0x30][0x01]
+Argh![MoveMidRight] What are you laggards doing?[NL]
+Go on, start attacking them![A]
+[X]

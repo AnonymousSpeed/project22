@@ -2,6 +2,8 @@
 
 EventPointerTable(0x07,ThisChapter)
 
+
+
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -15,6 +17,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, PrepAIChange, 1,255)
 END_MAIN
 
 CharacterBasedEvents:
@@ -52,6 +55,7 @@ ENDTRAP
 
 ALIGN 4
 
+//Soothe not yet implemented, giving Esme D staves and Heal for now - change to E once Soothe implemented
 Units:
 UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [7,11] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
 UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [8,11] 0x00 0x00 0x0 0x00 [IronSword] NoAI
@@ -64,9 +68,10 @@ UNIT
 //Let me know what we want to call these enemies and I'll set up any definitions we need.
 //note: in-world they are bandits; generally I will refer to generic bad guys by byte rather than name
 //because e.g. 0x66 is more descriptive ("got it; it's that character slot in particular") than Bandit1 ("it's... one of many bandits, huh")
-//boss character deets pending
+//boss character deets pending 
+//need to fully setup InfantryLock for Pike later.
 Enemies:
-UNIT 0x68 Deserter 0x01 Level(4, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [IronPike] AttackInRangeAI
+UNIT 0x68 Deserter 0x01 Level(4, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [IronLance, IronPike] AttackInRangeAI
 UNIT 0x66 Brigand 0x01 Level(3, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT 0x66 Mercenary 0x01 Level(3, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
 UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
@@ -76,6 +81,15 @@ UNIT 0x66 Mercenary 0x01 Level(1, Enemy, 0) [3,10] 0x00 0x00 0x0 0x00 [IronSword
 UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
 UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [12,9] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT
+
+PrepAIChange:
+CHECK_EVENTID 0x8
+BEQ 0x1 0x0 0xC
+//boss attacked
+	ChangeAI(0x66, 0, 0)
+LABEL 0x1
+NoFade
+ENDA	
 
 BeginningScene:
 LOAD1 1 Units
