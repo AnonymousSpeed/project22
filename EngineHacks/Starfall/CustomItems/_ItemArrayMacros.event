@@ -1,7 +1,7 @@
 //change the offset to repoint these tables and update the macros
 #ifndef ItemPointerTables
 	#define ItemPointerTables
-	#include "Extensions\Hack Installation.txt"
+	#include "Extensions/Hack Installation.txt"
 	
 	//Table Offsets
 	//Comment out definitions if moving tables INLINE

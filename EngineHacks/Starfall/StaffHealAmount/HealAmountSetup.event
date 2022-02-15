@@ -4,7 +4,7 @@
 	#ifdef _FE8_
 		PUSH
 		ORG 0x16FB8
-		#incbin "Staff Heal Formula.dmp"
+		#incbin "StaffHealFormula.dmp"
 		//stuff that modifies the heal amount
 		POIN 0x80175DC //get item stat to add to heal value
 		POIN 0x80191B0 //get unit stat to add to heal value
