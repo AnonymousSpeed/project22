@@ -106,11 +106,11 @@ ENDA
 BeginningScene:
 LOAD2 0x1 Units
 ENUN
-LOAD1 0x1 NewPlayers
-ENUN
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
+ENUN
+LOAD1 0x1 NewPlayers
 ENUN
 ENDA
 

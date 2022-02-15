@@ -2,7 +2,6 @@
 //Modified by Nintenlord
 
 #include EAstdlib.event
-#include RedsMacros.event
 
 EventPointerTable(0x21,ThisChapter)
 EscapePointPointerTable(0x6,Escape)

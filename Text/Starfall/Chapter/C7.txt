@@ -1,0 +1,33 @@
+## C7HouseTest
+[MidRight][LoadFace][0x01][0x01]
+Debug[A][X]
+
+## C7BossQuote1
+[MidRight][LoadFace][0x34][0x01]
+I shall not permit you to enter the castle![A]
+[X]
+
+## C7DeathQuote1
+[MidRight][LoadFace][0x34][0x01]
+[CloseEyes]Urggh[Beat][NL]Is this the end of House Yulian?[A]
+[X]
+
+## C7BossQuote2
+[MidRight][LoadFace][0x36][0x01]
+Blast! I've been caught![A][NL][Beat]No matter! You will all burn![A]
+[X]
+
+## C7DeathQuote2
+[MidRight][LoadFace][0x36][0x01]
+[CloseEyes]Why must I lose?[A][NL]My plans[Beat] Going up in smoke[Beat][A]
+[X]
+
+## C7BossQuote3
+[MidRight][LoadFace][0x37][0x01]
+You think to challenge me?[A][NL]Fools! You don't stand a chance![A]
+[X]
+
+## C7DeathQuote3
+[MidRight][LoadFace][0x37][0x01]
+Unhand me, fiends![A]
+[X]

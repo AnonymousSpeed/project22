@@ -12,3 +12,12 @@ Baeric[X]
 
 ## BasrenName
 Basren[X]
+
+## NolanName
+Nolan[X]
+
+## OsmanName
+Osman[X]
+
+## ArmelName
+Armel[X]
