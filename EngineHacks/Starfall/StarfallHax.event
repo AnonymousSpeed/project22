@@ -10,3 +10,6 @@
 #include "NewCalcs/NewCalcs.event"
 
 #include "CustomItems/_CustomItemSetup.event"
+
+#include "StaffHealAmount/HealAmountSetup.event"
+
