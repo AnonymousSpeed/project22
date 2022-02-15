@@ -68,10 +68,11 @@ UNIT Baeric SwordRider 0x00 Level(1, Ally, 0) [17,1] 0x00 0x00 0x0 0x00 [IronSwo
 UNIT Basren BowRider 0x01 Level(1, Ally, 0) [18,2] 0x00 0x00 0x0 0x00 [IronBow, IronLongbow] NoAI
 UNIT
 
+//giving georgios an iron sword because his base speed is poor enough that being stuck with an iron blade is really bad vs the deserter nearby - Worth either swapping enemies here or buffing Georgios
 NewPlayers:
 UNIT Neritas AxeRider Esme Level(1,Ally,False) [1,2] 0x0 0x0 0x0 0x0 [BronzeAxe] NoAI
 UNIT Vulture Cleric Esme Level(1,Ally,False) [0,3] 0x0 0x0 0x0 0x0 [Soothe,LightRune,Vulnerary] NoAI
-UNIT Georgios Mercenary Esme Level(1,Ally,False) [3,3] 0x0 0x0 0x0 0x0 [IronBlade] NoAI
+UNIT Georgios Mercenary Esme Level(1,Ally,False) [3,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT
 
 EnemyUnits:

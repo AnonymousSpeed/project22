@@ -13,6 +13,15 @@ Baeric[X]
 ## BasrenName
 Basren[X]
 
+## NeritasName
+Neritas[X]
+
+## VultureName
+Vulture[X]
+
+## GeorgiosName
+Georgios[X]
+
 ## NolanName
 Nolan[X]
 
