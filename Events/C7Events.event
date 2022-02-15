@@ -42,7 +42,7 @@ Seize(10, 2)
 END_MAIN
 
 MiscBasedEvents:
-AREA 0x08 SpawnGreenReinforcments [18, 6] [18, 6]
+AREA 14 SpawnGreenReinforcments [18, 6] [18, 6]
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -147,10 +147,10 @@ BEQ 0x0 0xC 0x0
 EVBIT_T 7
 ENDA
 LABEL 0x0
-CHECK_EVENTID 0x13
+CHECK_EVENTID 13
 BNE 0x1 0xC 0x0
 ChangeAI(0x67,AttackInRange,0xC)
-ENUT 0x13
+ENUT 13
 EVBIT_T 7
 ENDA
 LABEL 0x1
