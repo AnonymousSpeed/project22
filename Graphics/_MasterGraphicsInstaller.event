@@ -1,2 +1,3 @@
 #include "MapSprites/_MapSpriteInstaller.event"
 #include "Mugs/_MugInstaller.event"
+#include "Icons/_IconInstaller.event"
