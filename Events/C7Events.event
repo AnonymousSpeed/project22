@@ -35,10 +35,11 @@ Door(16,8)
 Door(13,10)
 Door(2,19)
 Door(6,3)
-Door(14, 2)
+Door(14,2)
 Chest(SteelLongbow,1,1)
 Chest(GoddessIcon,21,14)
-Seize(10, 2)
+Seize(10,2)
+House(0x00,House1,13,23)
 END_MAIN
 
 MiscBasedEvents:
@@ -160,6 +161,11 @@ ENDA
 Reinforce:
 LOAD1 1 EnemyReinforce
 EVBIT_T 7
+ENDA
+
+House1:
+StartText(C7HouseTest)
+TEXTEND
 ENDA
 
 MESSAGE Events end at offset CURRENTOFFSET
