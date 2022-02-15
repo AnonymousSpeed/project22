@@ -1,0 +1,171 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x21,ThisChapter)
+EscapePointPointerTable(0x6,Escape)
+NPCEscapePointPointerTable(0x6,Escape)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+POIN Escape
+
+TurnBasedEvents:
+TurnEventEnemy(0x00,BadmanEscapeStart,2)
+TurnEventNPC(0x00,BadmanKilled,1,255)
+TurnEventPlayer(0x00,Reinforce,8,13)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Door(16,8)
+Door(13,10)
+Door(2,19)
+Door(6,3)
+Door(14,2)
+Chest(SteelLongbow,1,1)
+Chest(GoddessIcon,21,14)
+Seize(10,2)
+House(0x00,House1,13,23)
+END_MAIN
+
+MiscBasedEvents:
+AREA 14 SpawnGreenReinforcments [18, 6] [18, 6]
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [7,26] 0x00 0x00 0x0 0x00 [IronLance, Soothe, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [8,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [9,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [10,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [11,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [12,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [13,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [14,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [15,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [16,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [16,26] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT
+
+Enemies:
+UNIT 0x4A General 0x00 Level(1, Enemy, 0) [16,19] DropItem 0x00 0x0 0x00 [IronGreatlance, Speedwing] GuardTileAI
+UNIT 0x66 Armor 0x4A Level(10, Enemy, 1) [15,19] 0x00 0x00 0x0 0x00 [IronLance] MoveWithLeaderAI
+UNIT 0x66 Armor 0x4A Level(10, Enemy, 1) [17,19] 0x00 0x00 0x0 0x00 [IronLance] MoveWithLeaderAI
+UNIT 0x66 Armor 0x00 Level(10, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [Javelin] GuardTileAI
+UNIT 0x66 Armor 0x00 Level(15, Enemy, 1) [8,2] 0x00 0x00 0x0 0x00 [Javelin] GuardTileAI
+UNIT 0x66 Soldier 0x00 Level(10, Enemy, 1) [8,16] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x66 Soldier 0x00 Level(10, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x66 Soldier 0x00 Level(10, Enemy, 1) [16,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x66 Mercenary 0x00 Level(10, Enemy, 1) [6,11] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
+UNIT 0x66 Mercenary 0x00 Level(10, Enemy, 1) [1,11] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x66 Soldier 0x00 Level(10, Enemy, 1) [9,10] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
+UNIT 0x66 Fighter 0x00 Level(10, Enemy, 1) [8,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT 0x66 Fighter 0x00 Level(10, Enemy, 1) [4,1] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
+UNIT 0x4B Diabolist 0x00 Level(3, Enemy, 0) [11, 2] 0x00 0x00 0x0 0x00 [Bolganone] GuardTileAI
+UNIT 0x4C Baron 0x00 Level(5, Enemy, 0) [10, 2] 0x00 0x00 0x0 0x00 [SteelBlade, Thunder] GuardTileAI
+UNIT
+
+GreenBros:
+UNIT 0x67 Hero 0x00 Level(1, NPC, 1) [23,20] 0x00 0x00 0x1 HeroMoves [IronBlade, HandAxe] DefaultAI
+UNIT 0x67 Mercenary 0x00 Level(10, NPC, 1) [23,20] 0x00 0x00 0x1 Merc1Moves [IronSword] DefaultAI
+UNIT 0x67 Mercenary 0x00 Level(10, NPC, 1) [23,20] 0x00 0x00 0x1 Merc2Moves [IronSword] DefaultAI
+UNIT
+
+HeroMoves:
+REDA [24,15] 0x00 0x0 0x00 0x00
+
+Merc1Moves:
+REDA [23,15] 0x00 0x0 0x00 0x00
+
+Merc2Moves:
+REDA [25,15] 0x00 0x0 0x00 0x00
+
+EnemyReinforce:
+UNIT 0x66 Fighter 0x00 Level(20, Enemy, 1) [19,22] 0x00 0x00 0x0 0x00 [HandAxe] DefaultAI
+UNIT
+
+BeginningScene:
+LOAD1 1 Enemies
+ENUN
+LOAD1 1 Units
+ENUN
+PREP
+ENDA
+
+EndingScene:
+MoveToChapter(7)
+ENDA
+
+Escape:
+EscapePoint(23,20,NoMove)
+TerminateEscapePoints
+EscapePointEnd
+
+BadmanEscapeStart:
+CAM1 0x4B
+MoveUnit(0x4B,13,2)
+SOUN 0xB1
+TILECHANGE 11
+MoveUnit(0x4B,15,2)
+TILEREVERSE 11
+ChangeAI(0x4B,AttackInRange,0xC)
+ENDA
+
+SpawnGreenReinforcments:
+CAM1 [24,15]
+LOAD1 1 GreenBros
+ENUN
+ENDA
+
+BadmanKilled:
+CHECK_EXISTS 0x4B
+BEQ 0x0 0xC 0x0
+EVBIT_T 7
+ENDA
+LABEL 0x0
+CHECK_EVENTID 13
+BNE 0x1 0xC 0x0
+ChangeAI(0x67,AttackInRange,0xC)
+ENUT 13
+EVBIT_T 7
+ENDA
+LABEL 0x1
+EVBIT_T 7
+ENDA
+
+Reinforce:
+LOAD1 1 EnemyReinforce
+EVBIT_T 7
+ENDA
+
+House1:
+StartText(C7HouseTest)
+TEXTEND
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

@@ -1,16 +1,31 @@
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
 #define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
+#define DeathQuote(Character,Chapter,EventID,TextID) "BYTE Character 0x00 0xff Chapter EventID 0x00 ;SHORT TextID ;WORD 0x0 "
 
 ALIGN 4
 BattleQuoteTable:
 UnspecifiedBattleConvo(0x68, 0, 8, C1BossBattleQuote)
+UnspecifiedBattleConvo(0x4A, 6, 1, C7BossQuote1)
+UnspecifiedBattleConvo(0x4B, 6, 8, C7BossQuote2)
+UnspecifiedBattleConvo(0x4C, 6, 10, C7BossQuote3)
 BYTE 0xFF 0xFF
 
+ALIGN 4
+DeathQuoteTable:
+DeathQuote(0x68,0,2,0x917)
+DeathQuote(0x4A,6,2,C7DeathQuote1)
+DeathQuote(0x4B,6,9,C7DeathQuote2)
+DeathQuote(0x4C,6,11,C7DeathQuote3)
+BYTE 0xFF 0xFF
 ALIGN 4
 
 PUSH
 ORG $846AC
 POIN BattleQuoteTable
+POP
+PUSH
+ORG 0x8472C
+POIN DeathQuoteTable
 POP
 
 ALIGN 4

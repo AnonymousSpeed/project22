@@ -21,3 +21,12 @@ Vulture[X]
 
 ## GeorgiosName
 Georgios[X]
+
+## NolanName
+Nolan[X]
+
+## OsmanName
+Osman[X]
+
+## ArmelName
+Armel[X]
