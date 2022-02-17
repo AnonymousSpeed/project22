@@ -162,4 +162,5 @@
 // Weapon Locks
 #define InfantryLock 0x00000800
 #define InfantryUnlock 0x00010000
+#define PikeLock 0x01000000
 

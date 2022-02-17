@@ -17,11 +17,19 @@ POP
 #define SoftClassLock 2
 #define HardClassLock 3
 #define EndLockArray 0
-
+/*
 TestArray:
 BYTE HardClassLock
 BYTE EirikaLord
 BYTE Rogue
+BYTE EndLockArray*/
+
+
+//add rest later
+PikeLockArray:
+BYTE HardClassLock
+BYTE Deserter
+BYTE Soldier
 BYTE EndLockArray
 
 #endif // ADV_WEAPON_LOCKS

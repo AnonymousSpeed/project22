@@ -71,7 +71,7 @@ UNIT
 //giving georgios an iron sword because his base speed is poor enough that being stuck with an iron blade is really bad vs the deserter nearby - Worth either swapping enemies here or buffing Georgios
 NewPlayers:
 UNIT Neritas AxeRider Esme Level(1,Ally,False) [1,2] 0x0 0x0 0x0 0x0 [BronzeAxe] NoAI
-UNIT Vulture Cleric Esme Level(1,Ally,False) [0,3] 0x0 0x0 0x0 0x0 [Soothe,LightRune,Vulnerary] NoAI
+UNIT Vulture Cleric Esme Level(1,Ally,False) [0,3] 0x0 0x0 0x0 0x0 [Heal,LightRune,Vulnerary] NoAI
 UNIT Georgios Mercenary Esme Level(1,Ally,False) [3,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT
 
@@ -83,13 +83,12 @@ UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [3,13] 0x0 0x0 0x0 0x0 [Br
 UNIT C2Generics Myrmidon   C2Boss Level(1,Enemy,True) [3,14] 0x0 0x0 0x0 0x0 [T1KillerSword,RedGem] TwoActionAI
 UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [3,7] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
 UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [4,8] 0x0 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [0,9] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
+//UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [0,9] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
 UNIT C2Generics FireMage   C2Boss Level(1,Enemy,True) [3,11] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
-UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [BronzeBow] TwoActionAI
+UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
 
 EnemyUnits2:
-UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [12,3] 0x0 0x0 0x0 0x0 [IronPoleaxe] TwoActionAI
-UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [13,4] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
+UNIT C2Generics Myrmidon  C2Boss Level(1,Enemy,True) [12,3] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
 UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [16,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
 UNIT C2Generics Fighter   C2Boss Level(1,Enemy,True) [18,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
 UNIT C2Generics Mercenary   C2Boss Level(1,Enemy,True) [13,11] 0x0 0x0 0x0 0x0 [BronzeSword] TwoActionAI

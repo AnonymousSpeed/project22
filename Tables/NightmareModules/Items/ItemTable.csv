@@ -23,8 +23,8 @@ KillerLance,KillerLanceName,KillerLanceDesc,0x0,20,Lances,IsWeapon,0x0,0x0,25,10
 BraveLance,BraveLanceName,BraveLanceDesc,0x0,21,Lances,IsWeapon|IsBrave,0x0,0x0,30,10,65,5,0,0x11,15,ARank,BraveLance,NoEffectID,NoEffect,1,0x0,0x0,0x0
 IronGreatlance,IronGreatlanceName,IronGreatlanceDesc,0x0,22,Lances,IsWeapon,0x0,0x0,25,13,65,3,0,0x11,16,DRank,IronGreatlance,NoEffectID,NoEffect,1,0x0,0x0,0x0
 SteelGreatlance,SteelGreatlanceName,SteelGreatlanceDesc,0x0,23,Lances,IsWeapon,0x0,0x0,20,17,60,4,0,0x11,60,CRank,SteelGreatlance,NoEffectID,NoEffect,1,0x0,0x0,0x0
-IronPike,IronPikeName,IronPikeDesc,0x0,24,Lances,IsWeapon|InfantryLock,0x0,0x0,30,5,80,2,0,0x11,0,DRank,IronPike,NoEffectID,NoEffect,1,0x0,0x0,0x0
-SteelPike,SteelPikeName,SteelPikeDesc,0x0,25,Lances,IsWeapon|InfantryLock,0x0,0x0,20,9,70,3,0,0x11,250,BRank,SteelPike,NoEffectID,NoEffect,1,0x0,0x0,0x0
+IronPike,IronPikeName,IronPikeDesc,0x0,24,Lances,IsWeapon|PikeLock,0x0,0x0,30,5,80,2,0,0x11,0,DRank,IronPike,NoEffectID,NoEffect,1,0x0,0x0,0x0
+SteelPike,SteelPikeName,SteelPikeDesc,0x0,25,Lances,IsWeapon|PikeLock,0x0,0x0,20,9,70,3,0,0x11,250,BRank,SteelPike,NoEffectID,NoEffect,1,0x0,0x0,0x0
 Javelin,JavelinName,JavelinDesc,0x0,26,Lances,IsWeapon,0x0,0x0,20,3,80,2,0,0x12,60,DRank,Javelin,NoEffectID,NoEffect,1,0x0,0x0,0x0
 Spear,SpearName,SpearDesc,0x0,27,Lances,IsWeapon,0x0,0x0,15,8,70,4,0,0x12,65,BRank,Spear,NoEffectID,NoEffect,1,0x0,0x0,0x0
 BronzeAxe,BronzeAxeName,BronzeAxeDesc,0x0,28,Axes,IsWeapon,0x0,0x0,50,5,90,0,255,0x11,20,ERank,BronzeAxe,NoEffectID,NoEffect,1,0x0,0x0,0x0
