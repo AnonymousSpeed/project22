@@ -6,3 +6,4 @@
 #include "MusicDefinitions.event"
 #include "MugDefinitions.event"
 #include "MapSpriteDefinitions.event"
+#include "PointerTableDefinitions.event"

@@ -25,6 +25,10 @@
 [MidRight] = [OpenMidRight]
 [FarRight] = [OpenFarRight]
 [FarFarRight] = [OpenFarFarRight]
+[OpenMidLeft] = [OpenFarLeft]
+[LoadMidLeft] = [LoadFarLeft]
+[OpenMidRight] = [OpenFarRight]
+[LoadMidRight] = [LoadFarRight]
 
 [<-......] = [FarFarLeft]
 [<-] = [FarFarLeft]
@@ -56,15 +60,4 @@
 [LoadNeritas] = [LoadFace][0x7][0x1]
 [LoadVulture] = [LoadFace][0x8][0x1]
 [LoadGeorgios] = [LoadFace][0x9][0x1]
-
-[LoadInnes] = [LoadFace][0xf][0x1]
-[LoadCormag] = [LoadFace][0x13][0x1]
-[LoadLArachel] = [LoadFace][0x22][0x1]
-[LoadRennac] = [LoadFace][0x24][0x1]
-[LoadMyrrh] = [LoadFace][0x28][0x1]
-[LoadTana] = [LoadFace][0x2c][0x1]
-[LoadDuessel] = [LoadFace][0x25][0x1]
-[LoadSelena] = [LoadFace][0x3f][0x1]
-[LoadGerik] = [LoadFace][0x1b][0x1]
-[LoadSaleh] = [LoadFace][0x20][0x1]
 

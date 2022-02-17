@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="right-down" width="15" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="15" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
  <tileset firstgid="1" name="pful fields tileset img" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="../Tileset/01000203.png" width="512" height="512"/>
  </tileset>
  <layer id="1" name="Main" width="15" height="13">
   <properties>
-   <property name="Anims1" value="0x05"/>
-   <property name="Anims2" value="0x00"/>
-   <property name="ChapterID" value="0x00"/>
+   <property name="Anims1" value="AssetWaterAnims"/>
+   <property name="ChapterID" value="Chapter1"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0x06"/>
-   <property name="MapID" value="0x04"/>
-   <property name="ObjectType" value="0x01"/>
-   <property name="PaletteID" value="0x02"/>
-   <property name="TileConfig" value="0x3"/>
+   <property name="MapChangesID" value="AssetCh01MapChanges"/>
+   <property name="MapID" value="AssetCh01Map"/>
+   <property name="ObjectType" value="AssetMountainsObj"/>
+   <property name="PaletteID" value="AssetMountainsPal"/>
+   <property name="TileConfig" value="AssetMountainsConfig"/>
   </properties>
   <data encoding="csv">
 808,809,810,722,723,605,630,364,396,209,728,391,783,163,131,
