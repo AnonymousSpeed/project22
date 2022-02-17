@@ -3,7 +3,6 @@
 Debug[A][X]
 
 ## Ch2StartEvent
-
 [LoadMidLeft][LoadEsme][LoadMidRight][LoadSolomin]
 [LoadMidLeft]The village is coming into view, Solomin.[NL]
 ... It likes as dire as the others.[A][X]
@@ -27,7 +26,6 @@ There are survivors. Let's ride![A][X]
 [OpenMidLeft]Very well. Let us ride![A][X]
 
 ## Ch2NewPlayersJoin
-
 [LoadLeft][LoadNeritas][LoadFarLeft][LoadVulture][LoadRight][LoadGeorgios]
 [LoadLeft]Georgios, how is it outside?[A][X]
 [LoadRight]It's crawling with those...[NL]

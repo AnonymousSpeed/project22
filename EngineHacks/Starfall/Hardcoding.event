@@ -68,6 +68,7 @@ ORG $581D4 // force ignore battle anim range end
 BYTE Rescue //range is just these 2 items
 ORG $581D8 // force ignore battle anim extra item
 BYTE Unlock
+/*
 ORG $18ACC //chest key ID
 BYTE 0xFF
 ORG $18AE0 //door key ID
@@ -76,6 +77,7 @@ ORG $18AB8 //lockpick ID
 BYTE 0xFF
 ORG $16F50 //lockpick ID
 BYTE 0xFF
+*/
 ORG $2F3C4 //item for healing anim
 BYTE Vulnerary
 ORG $35816 //item for fort healing anim
