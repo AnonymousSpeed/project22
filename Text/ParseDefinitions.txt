@@ -48,6 +48,15 @@
 
 [CurrentPortrait] = [0xFF][0xFF]
 
+[LoadEsme] = [LoadFace][0x2][0x1]
+[LoadSolomin] = [LoadFace][0x3][0x1]
+[LoadOldrik] = [LoadFace][0x4][0x1]
+[LoadBaeric] = [LoadFace][0x5][0x1]
+[LoadBasren] = [LoadFace][0x6][0x1]
+[LoadNeritas] = [LoadFace][0x7][0x1]
+[LoadVulture] = [LoadFace][0x8][0x1]
+[LoadGeorgios] = [LoadFace][0x9][0x1]
+
 [LoadInnes] = [LoadFace][0xf][0x1]
 [LoadCormag] = [LoadFace][0x13][0x1]
 [LoadLArachel] = [LoadFace][0x22][0x1]
@@ -58,3 +67,4 @@
 [LoadSelena] = [LoadFace][0x3f][0x1]
 [LoadGerik] = [LoadFace][0x1b][0x1]
 [LoadSaleh] = [LoadFace][0x20][0x1]
+
