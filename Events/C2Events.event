@@ -3,7 +3,7 @@
 
 #include EAstdlib.event
 
-EventPointerTable(0xD,ThisChapter)
+EventPointerTable(AssetCh02Data,ThisChapter)
 
 ThisChapter:
 POIN TurnBasedEvents

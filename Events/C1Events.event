@@ -2,8 +2,6 @@
 
 EventPointerTable(0x07,ThisChapter)
 
-
-
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -21,6 +19,7 @@ TurnEventPlayer(0, PrepAIChange, 1,255)
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(0x0, EndingScene, Esme, Oldrik)
 END_MAIN
 
 ALIGN 4
@@ -102,5 +101,5 @@ Ch1Village:
 VillageEventItem(C1VillageText,Village,IronBlade)
 
 EndingScene:
-MoveToChapter(1)
+MNC2 0x1
 ENDA
