@@ -16,5 +16,8 @@
 #include "C2Events.event"
 }
 {
+#include "C3Events.event"
+}
+{
 #include "C7Events.event"
 }

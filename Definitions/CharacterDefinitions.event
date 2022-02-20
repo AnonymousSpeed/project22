@@ -6,6 +6,12 @@
 #define Neritas 0x6
 #define Vulture 0x8
 #define Georgios 0x9
+#define Tzesar 0x0A
+#define Neil 0x0B
 
 #define C2Boss 0x46
+#define C3Boss 0x47
 #define C2Generics 0x67 
+#define C3Generic 0x6E
+
+#define TzesarNPC 0x6F

@@ -30,3 +30,12 @@ Osman[X]
 
 ## ArmelName
 Armel[X]
+
+## TzesarName
+Duke Tzesar[X]
+
+## NeilName
+Neil[X]
+
+## TzesarNPCName
+Tzesar's[X]

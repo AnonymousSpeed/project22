@@ -1,0 +1,90 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x14,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [1,1] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [0,1] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Oldrik LanceRider 0x00 Level(1, Ally, 0) [2,1] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0x00 Level(1, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0x01 Level(1, Ally, 0) [1,0] 0x00 0x00 0x0 0x00 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider Esme Level(1,Ally,False) [2,0] 0x0 0x0 0x0 0x0 [BronzeAxe] NoAI
+UNIT Vulture Cleric Esme Level(1,Ally,False) [0,0] 0x0 0x0 0x0 0x0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary Esme Level(1,Ally,False) [2,2] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT
+
+NewAllies:
+UNIT Tzesar ThunderMage 0x0 Level(4,NPC,0) [15,12] 0 0 0 0 [Thunder, Talisman] GuardTileAI
+UNIT Neil Armor 0 Level(4,NPC,0) [15,10] 0 0 0 0 [IronSword, Javelin, Vulnerary] [0x3, 0x3, 0x3, 0x0] //guard tile ai with vulnerary use
+UNIT TzesarNPC Archer 0 Level(1,NPC,1) [15,11] 0 0 0 0 [IronLongbow] GuardTileAI
+UNIT
+
+Enemies:
+UNIT C3Boss Soldier 0 Level(6,Enemy,0) [21,0] 0 0 0 0 [BronzeLance, Spear] AttackInRangeAI
+UNIT C3Generic Fighter 0 Level(3,Enemy,1) [5,4] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C3Generic Mercenary 0 Level(3,Enemy,1) [8,2] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT C3Generic Myrmidon 0 Level(3,Enemy,1) [12,3] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT C3Generic Soldier 0 Level(3,Enemy,1) [18,2] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT C3Generic FireMage 0 Level(3,Enemy,1) [14,3] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT C3Generic AxeRider_D 0 Level(3,Enemy,1) [18,7] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C3Generic WindMage 0 Level(3,Enemy,1) [19,7] 0 0 0 0 [Wind] AttackInRangeAI
+UNIT C3Generic Archer 0 Level(3,Enemy,1) [5,13] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT C3Generic AxeRider_D 0 Level(3,Enemy,1) [0,8] 0 0 0 0 [Hammer] AttackInRangeAI
+UNIT C3Generic SwordRider_D 0 Level(3,Enemy,1) [0,11] 0 0 0 0 [Armorslayer] AttackInRangeAI
+UNIT
+
+
+BeginningScene:
+LOAD1 0x1 Units
+ENUN
+LOAD1 0x1 NewAllies
+ENUN
+LOAD1 0x1 Enemies
+ENUN
+ENDA
+
+EndingScene:
+MoveToChapter(0x3)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET
