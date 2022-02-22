@@ -159,6 +159,7 @@
 #define MageType	0x40
 
 //Status Effects
+
 #define NoStatusID 0
 #define PoisonStatusID 1
 #define SleepStatusID 2
@@ -171,10 +172,18 @@
 #define SickStatusID 9
 #define PetrifyStatusID 13
 
+#define HexingRodStatusID 0xE //first fully unused status ID
+#define FreezeStatusID 0xF
+#define RegenStatusID 0x10
+#define HasteStatusID 0x11
+#define SlowStatusID 0x12
+#define EnfeebleStatusID 0x1F //last valid status ID
+
 //for setting what status effect 
 //status staves will give 
-#define ItemStatus(StatusID,Duration) "StatusID | (Duration << 4)"
+#define ItemStatus(StatusID,Duration) "StatusID | (Duration << 5)"
 
+//item use effects
 #define NoEffectID 0
 #define HealEffectID 1
 #define MendEffectID 2

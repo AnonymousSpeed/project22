@@ -13,3 +13,5 @@
 
 #include "StaffHealAmount/HealAmountSetup.event"
 
+#include "StatusExpansion/StatusExpansion.event"
+
