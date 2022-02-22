@@ -77,6 +77,9 @@ UnitMenuTable:
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, VeinUsability, VeinEffect)
   #endif // DRAGON_VEINS
   
+  //laguz transformation
+  MenuCommand(UM_Transform,UM_TransformDesc, GreenText, TransformUsability, TransformEffect)
+  
   // UM_Attack
   MenuCommand(0x67b, 0x6c0, NormalText, $249ac, AttackEffect, $22c31, $22c99) //to clear flags
   // UM_Attack_B
