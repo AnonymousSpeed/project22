@@ -13,5 +13,8 @@
 
 #include "StaffHealAmount/HealAmountSetup.event"
 
+#include "StatusExpansion/StatusExpansion.event"
+
 #include "LaguzBars/LaguzBars.event"
+
 

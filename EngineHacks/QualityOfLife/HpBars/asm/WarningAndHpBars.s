@@ -362,8 +362,8 @@ add		sp,#0x10
 pop		{r4-r7}
 mov		r0,#status_byte
 ldrb	r0,[r4,r0]
-lsl		r0,#0x1C
-lsr		r0,#0x1C
+lsl		r0,#0x1B
+lsr		r0,#0x1B
 ldr		r1,=return_addr
 bx		r1
 
