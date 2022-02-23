@@ -18,6 +18,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0,T4AIChange,4)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -28,6 +29,7 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -69,9 +71,22 @@ UNIT C3Generic FireMage 0 Level(3,Enemy,1) [14,3] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT C3Generic AxeRider_D 0 Level(3,Enemy,1) [18,7] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT C3Generic WindMage 0 Level(3,Enemy,1) [19,7] 0 0 0 0 [Wind] AttackInRangeAI
 UNIT C3Generic Archer 0 Level(3,Enemy,1) [5,13] 0 0 0 0 [IronBow] AttackInRangeAI
-UNIT C3Generic AxeRider_D 0 Level(3,Enemy,1) [0,8] 0 0 0 0 [Hammer] AttackInRangeAI
-UNIT C3Generic SwordRider_D 0 Level(3,Enemy,1) [0,11] 0 0 0 0 [Armorslayer] AttackInRangeAI
+UNIT C3Generic2 AxeRider_D 0 Level(4,Enemy,1) [0,8] 0 0 0 0 [Hammer] AttackInRangeAI
+UNIT C3Generic2 SwordRider_D 0 Level(4,Enemy,1) [0,11] 0 0 0 0 [Armorslayer] AttackInRangeAI
 UNIT
+
+Enemies2:
+UNIT C3Generic Mercenary 0 Level(1,Enemy,1) [7,8] 0 0 0 0 [BronzeSword] AttackInRangeAI
+UNIT C3Generic Mercenary 0 Level(1,Enemy,1) [10,11] 0 0 0 0 [IronSword] TwoActionAI
+UNIT C3Generic2 Soldier 0 Level(4,Enemy,1) [18,4] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT C3Generic Fighter 0 Level(2,Enemy,1) [7,10] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C3Generic ThunderMage 0 Level(4,Enemy,1) [19,0] 0 0 0 0 [Thunder] AttackInRangeAI
+UNIT C3Generic Myrmidon 0 Level(3,Enemy,1) [20,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT
+
+T4AIChange:
+ChangeAI(C3Generic2,0,0)
+ENDA
 
 
 BeginningScene:
@@ -80,6 +95,8 @@ ENUN
 LOAD1 0x1 NewAllies
 ENUN
 LOAD1 0x1 Enemies
+ENUN
+LOAD1 0x1 Enemies2
 ENUN
 ENDA
 

@@ -1,0 +1,27 @@
+
+#ifndef LAGUZ_BARS_INSTALLED
+#define LAGUZ_BARS_INSTALLED
+
+#include "eastdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+#include "ModuleConfig.event"
+
+ALIGN 4
+LaguzClassList:
+// BYTE untransformedClass transformedClass
+BYTE 0 0 // terminator
+
+#ifdef LAGUZ_SKILLS
+
+ALIGN 4
+WildheartIDLink:
+BYTE 0xFF
+FormshiftIDLink:
+BYTE 0xFF
+
+#endif // LAGUZ_SKILLS
+
+#include "LaguzBars_Internal.event"
+
+#endif // LAGUZ_BARS_INSTALLED
