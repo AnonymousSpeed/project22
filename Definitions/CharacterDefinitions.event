@@ -13,5 +13,6 @@
 #define C3Boss 0x47
 #define C2Generics 0x67 
 #define C3Generic 0x6E
+#define C3Generic2 0x70
 
 #define TzesarNPC 0x6F

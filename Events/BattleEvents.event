@@ -13,6 +13,8 @@ BYTE 0xFF 0xFF
 ALIGN 4
 DeathQuoteTable:
 DeathQuote(0x68,0,2,0x917)
+DeathQuote(C2Boss,1,2,0)
+DeathQuote(C3Boss,2,2,0)
 DeathQuote(0x4A,6,2,C7DeathQuote1)
 DeathQuote(0x4B,6,9,C7DeathQuote2)
 DeathQuote(0x4C,6,11,C7DeathQuote3)
