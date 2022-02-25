@@ -23,6 +23,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x7, RecruitNewUnits, Esme, Neil)
+CharacterEvent(0x7, RecruitNewUnits, Esme, Tzesar)
 END_MAIN
 
 LocationBasedEvents:
@@ -57,8 +59,13 @@ UNIT
 
 NewAllies:
 UNIT Tzesar ThunderMage 0x0 Level(4,NPC,0) [15,12] 0 0 0 0 [Thunder, Talisman] GuardTileAI
-UNIT Neil Armor 0 Level(4,NPC,0) [15,10] 0 0 0 0 [IronSword, Javelin, Vulnerary] [0x3, 0x3, 0x3, 0x0] //guard tile ai with vulnerary use
+UNIT Neil Armor 0 Level(4,NPC,0) [15,10] 0 0 0 0 [IronSword, Javelin, Vulnerary] GuardTileAI //guard tile ai with vulnerary use
 UNIT TzesarNPC Archer 0 Level(1,NPC,1) [15,11] 0 0 0 0 [IronLongbow] GuardTileAI
+UNIT
+
+NewAlliesEndRecruit:
+UNIT Tzesar ThunderMage 0x0 Level(4,Ally,0) [15,12] 0 0 0 0 [Thunder, Talisman] GuardTileAI
+UNIT Neil Armor 0 Level(4,Ally,0) [15,10] 0 0 0 0 [IronSword, Javelin, Vulnerary] GuardTileAI
 UNIT
 
 Enemies:
@@ -88,6 +95,13 @@ T4AIChange:
 ChangeAI(C3Generic2,0,0)
 ENDA
 
+RecruitNewUnits:
+TurnAlly(Neil)
+TurnAlly(Tzesar)
+ENUT 0x7
+NoFade
+ENDA
+
 
 BeginningScene:
 LOAD1 0x1 Units
@@ -101,6 +115,8 @@ ENUN
 ENDA
 
 EndingScene:
+LOAD1 0x1 NewAlliesEndRecruit
+ENUN
 MoveToChapter(0x3)
 ENDA
 
