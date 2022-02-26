@@ -1,6 +1,8 @@
 //defining common macros, please put them all here
 #define ChangeAI(UnitID, AI1, AI2) "SVAL s1 AI2 << 8 | AI1; CHAI UnitID"
-#define TwoActionAI [0x0,0x6]
+#define TwoActionAI [0x0,0x6,0x4,0x0]
+#define LootOnlyThenEscapeAI [0x6,0x5,0x4,0x0]
+#define StationaryBossAI [0x3, 0x3, 0x0, 0x20]
 #define GiveItem(Item,Character) "CALL $591F40 ; SVAL 0x3 Item ; GIVEITEMTO Character"
 #define MoveUnit(UnitID, X, Y) "MOVE 0 UnitID [X, Y]; ENUN" // these two are kind of useless but I'm using them anyway
 #define MoveUnitWithSpeed(UnitID, X, Y, Speed) "MOVE Speed UnitID [X, Y]; ENUN"
@@ -9,15 +11,19 @@
 
 #include "WorldMapEvents.event"
 #include "BattleEvents.event"
+#include "EscapePoints.event"
 {
-#include "C1Events.event"
+	#include "C1Events.event"
 }
 {
-#include "C2Events.event"
+	#include "C2Events.event"
 }
 {
-#include "C3Events.event"
+	#include "C3Events.event"
 }
 {
-#include "C7Events.event"
+	#include "C5Events.event"
+}
+{
+	#include "C7Events.event"
 }

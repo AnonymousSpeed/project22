@@ -1,557 +1,557 @@
 /*
 ClassCardFile:
-#incext Png2Dmp ".png" --lz77
+#incbin "Dmp/.dmp"
 
 ClassCardPalette:
-#incext Png2Dmp ".png" --palette-only
+#incbin "Dmp/.png_pal.dmp"
 
 setCardEntry(ClassCard,ClassCardFile,ClassCardPalette)
 */
 
 LordClassCardFile:
-#incext Png2Dmp "Lord.png" --lz77
+#incbin "Dmp/Lord.dmp"
 
 LordClassCardPalette:
-#incext Png2Dmp "Lord.png" --palette-only
+#incbin "Dmp/Lord.png_pal.dmp"
 
 setCardEntry(LordClassCard,LordClassCardFile,LordClassCardPalette)
 
 
 SwordRiderClassCardFile:
-#incext Png2Dmp "SwordRider.png" --lz77
+#incbin "Dmp/SwordRider.dmp"
 
 SwordRiderClassCardPalette:
-#incext Png2Dmp "SwordRider.png" --palette-only
+#incbin "Dmp/SwordRider.png_pal.dmp"
 
 setCardEntry(SwordRiderClassCard,SwordRiderClassCardFile,SwordRiderClassCardPalette)
 
 
 LanceRiderClassCardFile:
-#incext Png2Dmp "LanceRider.png" --lz77
+#incbin "Dmp/LanceRider.dmp"
 
 LanceRiderClassCardPalette:
-#incext Png2Dmp "LanceRider.png" --palette-only
+#incbin "Dmp/LanceRider.png_pal.dmp"
 
 setCardEntry(LanceRiderClassCard,LanceRiderClassCardFile,LanceRiderClassCardPalette)
 
 
 AxeRiderClassCardFile:
-#incext Png2Dmp "AxeRider.png" --lz77
+#incbin "Dmp/AxeRider.dmp"
 
 AxeRiderClassCardPalette:
-#incext Png2Dmp "AxeRider.png" --palette-only
+#incbin "Dmp/AxeRider.png_pal.dmp"
 
 setCardEntry(AxeRiderClassCard,AxeRiderClassCardFile,AxeRiderClassCardPalette)
 
 
 BowRiderClassCardFile:
-#incext Png2Dmp "BowRider.png" --lz77
+#incbin "Dmp/BowRider.dmp"
 
 BowRiderClassCardPalette:
-#incext Png2Dmp "BowRider.png" --palette-only
+#incbin "Dmp/BowRider.png_pal.dmp"
 
 setCardEntry(BowRiderClassCard,BowRiderClassCardFile,BowRiderClassCardPalette)
 
 
 ArmorClassCardFile:
-#incext Png2Dmp "Armor.png" --lz77
+#incbin "Dmp/Armor.dmp"
 
 ArmorClassCardPalette:
-#incext Png2Dmp "Armor.png" --palette-only
+#incbin "Dmp/Armor.png_pal.dmp"
 
 setCardEntry(ArmorClassCard,ArmorClassCardFile,ArmorClassCardPalette)
 
 
 SoldierClassCardFile:
-#incext Png2Dmp "Soldier.png" --lz77
+#incbin "Dmp/Soldier.dmp"
 
 SoldierClassCardPalette:
-#incext Png2Dmp "Soldier.png" --palette-only
+#incbin "Dmp/Soldier.png_pal.dmp"
 
 setCardEntry(SoldierClassCard,SoldierClassCardFile,SoldierClassCardPalette)
 
 
 MercenaryClassCardFile:
-#incext Png2Dmp "Mercenary.png" --lz77
+#incbin "Dmp/Mercenary.dmp"
 
 MercenaryClassCardPalette:
-#incext Png2Dmp "Mercenary.png" --palette-only
+#incbin "Dmp/Mercenary.png_pal.dmp"
 
 setCardEntry(MercenaryClassCard,MercenaryClassCardFile,MercenaryClassCardPalette)
 
 
 FighterClassCardFile:
-#incext Png2Dmp "Fighter.png" --lz77
+#incbin "Dmp/Fighter.dmp"
 
 FighterClassCardPalette:
-#incext Png2Dmp "Fighter.png" --palette-only
+#incbin "Dmp/Fighter.png_pal.dmp"
 
 setCardEntry(FighterClassCard,FighterClassCardFile,FighterClassCardPalette)
 
 
 ArcherClassCardFile:
-#incext Png2Dmp "Archer.png" --lz77
+#incbin "Dmp/Archer.dmp"
 
 ArcherClassCardPalette:
-#incext Png2Dmp "Archer.png" --palette-only
+#incbin "Dmp/Archer.png_pal.dmp"
 
 setCardEntry(ArcherClassCard,ArcherClassCardFile,ArcherClassCardPalette)
 
 
 ThiefClassCardFile:
-#incext Png2Dmp "Thief.png" --lz77
+#incbin "Dmp/Thief.dmp"
 
 ThiefClassCardPalette:
-#incext Png2Dmp "Thief.png" --palette-only
+#incbin "Dmp/Thief.png_pal.dmp"
 
 setCardEntry(ThiefClassCard,ThiefClassCardFile,ThiefClassCardPalette)
 
 
 MyrmidonClassCardFile:
-#incext Png2Dmp "Myrmidon.png" --lz77
+#incbin "Dmp/Myrmidon.dmp"
 
 MyrmidonClassCardPalette:
-#incext Png2Dmp "Myrmidon.png" --palette-only
+#incbin "Dmp/Myrmidon.png_pal.dmp"
 
 setCardEntry(MyrmidonClassCard,MyrmidonClassCardFile,MyrmidonClassCardPalette)
 
 
 DeserterClassCardFile:
-#incext Png2Dmp "Deserter.png" --lz77
+#incbin "Dmp/Deserter.dmp"
 
 DeserterClassCardPalette:
-#incext Png2Dmp "Deserter.png" --palette-only
+#incbin "Dmp/Deserter.png_pal.dmp"
 
 setCardEntry(DeserterClassCard,DeserterClassCardFile,DeserterClassCardPalette)
 
 
 BrigandClassCardFile:
-#incext Png2Dmp "Brigand.png" --lz77
+#incbin "Dmp/Brigand.dmp"
 
 BrigandClassCardPalette:
-#incext Png2Dmp "Brigand.png" --palette-only
+#incbin "Dmp/Brigand.png_pal.dmp"
 
 setCardEntry(BrigandClassCard,BrigandClassCardFile,BrigandClassCardPalette)
 
 
 PirateClassCardFile:
-#incext Png2Dmp "Pirate.png" --lz77
+#incbin "Dmp/Pirate.dmp"
 
 PirateClassCardPalette:
-#incext Png2Dmp "Pirate.png" --palette-only
+#incbin "Dmp/Pirate.png_pal.dmp"
 
 setCardEntry(PirateClassCard,PirateClassCardFile,PirateClassCardPalette)
 
 
 PegasusRiderClassCardFile:
-#incext Png2Dmp "PegasusRider.png" --lz77
+#incbin "Dmp/PegasusRider.dmp"
 
 PegasusRiderClassCardPalette:
-#incext Png2Dmp "PegasusRider.png" --palette-only
+#incbin "Dmp/PegasusRider.png_pal.dmp"
 
 setCardEntry(PegasusRiderClassCard,PegasusRiderClassCardFile,PegasusRiderClassCardPalette)
 
 
 WyvernRiderClassCardFile:
-#incext Png2Dmp "WyvernRider.png" --lz77
+#incbin "Dmp/WyvernRider.dmp"
 
 WyvernRiderClassCardPalette:
-#incext Png2Dmp "WyvernRider.png" --palette-only
+#incbin "Dmp/WyvernRider.png_pal.dmp"
 
 setCardEntry(WyvernRiderClassCard,WyvernRiderClassCardFile,WyvernRiderClassCardPalette)
 
 
 ThunderMageClassCardFile:
-#incext Png2Dmp "ThunderMage.png" --lz77
+#incbin "Dmp/ThunderMage.dmp"
 
 ThunderMageClassCardPalette:
-#incext Png2Dmp "ThunderMage.png" --palette-only
+#incbin "Dmp/ThunderMage.png_pal.dmp"
 
 setCardEntry(ThunderMageClassCard,ThunderMageClassCardFile,ThunderMageClassCardPalette)
 
 
 FireMageClassCardFile:
-#incext Png2Dmp "FireMage.png" --lz77
+#incbin "Dmp/FireMage.dmp"
 
 FireMageClassCardPalette:
-#incext Png2Dmp "FireMage.png" --palette-only
+#incbin "Dmp/FireMage.png_pal.dmp"
 
 setCardEntry(FireMageClassCard,FireMageClassCardFile,FireMageClassCardPalette)
 
 
 WindMageClassCardFile:
-#incext Png2Dmp "WindMage.png" --lz77
+#incbin "Dmp/WindMage.dmp"
 
 WindMageClassCardPalette:
-#incext Png2Dmp "WindMage.png" --palette-only
+#incbin "Dmp/WindMage.png_pal.dmp"
 
 setCardEntry(WindMageClassCard,WindMageClassCardFile,WindMageClassCardPalette)
 
 
 ClericClassCardFile:
-#incext Png2Dmp "Cleric.png" --lz77
+#incbin "Dmp/Cleric.dmp"
 
 ClericClassCardPalette:
-#incext Png2Dmp "Cleric.png" --palette-only
+#incbin "Dmp/Cleric.png_pal.dmp"
 
 setCardEntry(ClericClassCard,ClericClassCardFile,ClericClassCardPalette)
 
 
 TroubadourClassCardFile:
-#incext Png2Dmp "Troubadour.png" --lz77
+#incbin "Dmp/Troubadour.dmp"
 
 TroubadourClassCardPalette:
-#incext Png2Dmp "Troubadour.png" --palette-only
+#incbin "Dmp/Troubadour.png_pal.dmp"
 
 setCardEntry(TroubadourClassCard,TroubadourClassCardFile,TroubadourClassCardPalette)
 
 
 PaladinClassCardFile:
-#incext Png2Dmp "Paladin.png" --lz77
+#incbin "Dmp/Paladin.dmp"
 
 PaladinClassCardPalette:
-#incext Png2Dmp "Paladin.png" --palette-only
+#incbin "Dmp/Paladin.png_pal.dmp"
 
 setCardEntry(PaladinClassCard,PaladinClassCardFile,PaladinClassCardPalette)
 
 
 ForrestKnightClassCardFile:
-#incext Png2Dmp "ForrestKnight.png" --lz77
+#incbin "Dmp/ForrestKnight.dmp"
 
 ForrestKnightClassCardPalette:
-#incext Png2Dmp "ForrestKnight.png" --palette-only
+#incbin "Dmp/ForrestKnight.png_pal.dmp"
 
 setCardEntry(ForrestKnightClassCard,ForrestKnightClassCardFile,ForrestKnightClassCardPalette)
 
 
 LancerClassCardFile:
-#incext Png2Dmp "Lancer.png" --lz77
+#incbin "Dmp/Lancer.dmp"
 
 LancerClassCardPalette:
-#incext Png2Dmp "Lancer.png" --palette-only
+#incbin "Dmp/Lancer.png_pal.dmp"
 
 setCardEntry(LancerClassCard,LancerClassCardFile,LancerClassCardPalette)
 
 
 GreatKnightClassCardFile:
-#incext Png2Dmp "GreatKnight.png" --lz77
+#incbin "Dmp/GreatKnight.dmp"
 
 GreatKnightClassCardPalette:
-#incext Png2Dmp "GreatKnight.png" --palette-only
+#incbin "Dmp/GreatKnight.png_pal.dmp"
 
 setCardEntry(GreatKnightClassCard,GreatKnightClassCardFile,GreatKnightClassCardPalette)
 
 
 ArchKnightClassCardFile:
-#incext Png2Dmp "ArchKnight.png" --lz77
+#incbin "Dmp/ArchKnight.dmp"
 
 ArchKnightClassCardPalette:
-#incext Png2Dmp "ArchKnight.png" --palette-only
+#incbin "Dmp/ArchKnight.png_pal.dmp"
 
 setCardEntry(ArchKnightClassCard,ArchKnightClassCardFile,ArchKnightClassCardPalette)
 
 
 FireKnightClassCardFile:
-#incext Png2Dmp "FireKnight.png" --lz77
+#incbin "Dmp/FireKnight.dmp"
 
 FireKnightClassCardPalette:
-#incext Png2Dmp "FireKnight.png" --palette-only
+#incbin "Dmp/FireKnight.png_pal.dmp"
 
 setCardEntry(FireKnightClassCard,FireKnightClassCardFile,FireKnightClassCardPalette)
 
 
 WindKnightClassCardFile:
-#incext Png2Dmp "WindKnight.png" --lz77
+#incbin "Dmp/WindKnight.dmp"
 
 WindKnightClassCardPalette:
-#incext Png2Dmp "WindKnight.png" --palette-only
+#incbin "Dmp/WindKnight.png_pal.dmp"
 
 setCardEntry(WindKnightClassCard,WindKnightClassCardFile,WindKnightClassCardPalette)
 
 
 ThunderKnightClassCardFile:
-#incext Png2Dmp "ThunderKnight.png" --lz77
+#incbin "Dmp/ThunderKnight.dmp"
 
 ThunderKnightClassCardPalette:
-#incext Png2Dmp "ThunderKnight.png" --palette-only
+#incbin "Dmp/ThunderKnight.png_pal.dmp"
 
 setCardEntry(ThunderKnightClassCard,ThunderKnightClassCardFile,ThunderKnightClassCardPalette)
 
 
 GeneralClassCardFile:
-#incext Png2Dmp "General.png" --lz77
+#incbin "Dmp/General.dmp"
 
 GeneralClassCardPalette:
-#incext Png2Dmp "General.png" --palette-only
+#incbin "Dmp/General.png_pal.dmp"
 
 setCardEntry(GeneralClassCard,GeneralClassCardFile,GeneralClassCardPalette)
 
 
 BaronClassCardFile:
-#incext Png2Dmp "Baron.png" --lz77
+#incbin "Dmp/Baron.dmp"
 
 BaronClassCardPalette:
-#incext Png2Dmp "Baron.png" --palette-only
+#incbin "Dmp/Baron.png_pal.dmp"
 
 setCardEntry(BaronClassCard,BaronClassCardFile,BaronClassCardPalette)
 
 
 HalberdierClassCardFile:
-#incext Png2Dmp "Halberdier.png" --lz77
+#incbin "Dmp/Halberdier.dmp"
 
 HalberdierClassCardPalette:
-#incext Png2Dmp "Halberdier.png" --palette-only
+#incbin "Dmp/Halberdier.png_pal.dmp"
 
 setCardEntry(HalberdierClassCard,HalberdierClassCardFile,HalberdierClassCardPalette)
 
 
 HeroClassCardFile:
-#incext Png2Dmp "Hero.png" --lz77
+#incbin "Dmp/Hero.dmp"
 
 HeroClassCardPalette:
-#incext Png2Dmp "Hero.png" --palette-only
+#incbin "Dmp/Hero.png_pal.dmp"
 
 setCardEntry(HeroClassCard,HeroClassCardFile,HeroClassCardPalette)
 
 
 WarriorClassCardFile:
-#incext Png2Dmp "Warrior.png" --lz77
+#incbin "Dmp/Warrior.dmp"
 
 WarriorClassCardPalette:
-#incext Png2Dmp "Warrior.png" --palette-only
+#incbin "Dmp/Warrior.png_pal.dmp"
 
 setCardEntry(WarriorClassCard,WarriorClassCardFile,WarriorClassCardPalette)
 
 
 ChampionClassCardFile:
-#incext Png2Dmp "Champion.png" --lz77
+#incbin "Dmp/Champion.dmp"
 
 ChampionClassCardPalette:
-#incext Png2Dmp "Champion.png" --palette-only
+#incbin "Dmp/Champion.png_pal.dmp"
 
 setCardEntry(ChampionClassCard,ChampionClassCardFile,ChampionClassCardPalette)
 
 
 SlayerClassCardFile:
-#incext Png2Dmp "Slayer.png" --lz77
+#incbin "Dmp/Slayer.dmp"
 
 SlayerClassCardPalette:
-#incext Png2Dmp "Slayer.png" --palette-only
+#incbin "Dmp/Slayer.png_pal.dmp"
 
 setCardEntry(SlayerClassCard,SlayerClassCardFile,SlayerClassCardPalette)
 
 
 DragoonClassCardFile:
-#incext Png2Dmp "Dragoon.png" --lz77
+#incbin "Dmp/Dragoon.dmp"
 
 DragoonClassCardPalette:
-#incext Png2Dmp "Dragoon.png" --palette-only
+#incbin "Dmp/Dragoon.png_pal.dmp"
 
 setCardEntry(DragoonClassCard,DragoonClassCardFile,DragoonClassCardPalette)
 
 
 HarbingerClassCardFile:
-#incext Png2Dmp "Harbinger.png" --lz77
+#incbin "Dmp/Harbinger.dmp"
 
 HarbingerClassCardPalette:
-#incext Png2Dmp "Harbinger.png" --palette-only
+#incbin "Dmp/Harbinger.png_pal.dmp"
 
 setCardEntry(HarbingerClassCard,HarbingerClassCardFile,HarbingerClassCardPalette)
 
 
 WarMonkClassCardFile:
-#incext Png2Dmp "WarMonk.png" --lz77
+#incbin "Dmp/WarMonk.dmp"
 
 WarMonkClassCardPalette:
-#incext Png2Dmp "WarMonk.png" --palette-only
+#incbin "Dmp/WarMonk.png_pal.dmp"
 
 setCardEntry(WarMonkClassCard,WarMonkClassCardFile,WarMonkClassCardPalette)
 
 
 AdventurerClassCardFile:
-#incext Png2Dmp "Adventurer.png" --lz77
+#incbin "Dmp/Adventurer.dmp"
 
 AdventurerClassCardPalette:
-#incext Png2Dmp "Adventurer.png" --palette-only
+#incbin "Dmp/Adventurer.png_pal.dmp"
 
 setCardEntry(AdventurerClassCard,AdventurerClassCardFile,AdventurerClassCardPalette)
 
 
 AssassinClassCardFile:
-#incext Png2Dmp "Assassin.png" --lz77
+#incbin "Dmp/Assassin.dmp"
 
 AssassinClassCardPalette:
-#incext Png2Dmp "Assassin.png" --palette-only
+#incbin "Dmp/Assassin.png_pal.dmp"
 
 setCardEntry(AssassinClassCard,AssassinClassCardFile,AssassinClassCardPalette)
 
 
 TricksterClassCardFile:
-#incext Png2Dmp "Trickster.png" --lz77
+#incbin "Dmp/Trickster.dmp"
 
 TricksterClassCardPalette:
-#incext Png2Dmp "Trickster.png" --palette-only
+#incbin "Dmp/Trickster.png_pal.dmp"
 
 setCardEntry(TricksterClassCard,TricksterClassCardFile,TricksterClassCardPalette)
 
 
 GrassrunnerClassCardFile:
-#incext Png2Dmp "Grassrunner.png" --lz77
+#incbin "Dmp/Grassrunner.dmp"
 
 GrassrunnerClassCardPalette:
-#incext Png2Dmp "Grassrunner.png" --palette-only
+#incbin "Dmp/Grassrunner.png_pal.dmp"
 
 setCardEntry(GrassrunnerClassCard,GrassrunnerClassCardFile,GrassrunnerClassCardPalette)
 
 
 SniperClassCardFile:
-#incext Png2Dmp "Sniper.png" --lz77
+#incbin "Dmp/Sniper.dmp"
 
 SniperClassCardPalette:
-#incext Png2Dmp "Sniper.png" --palette-only
+#incbin "Dmp/Sniper.png_pal.dmp"
 
 setCardEntry(SniperClassCard,SniperClassCardFile,SniperClassCardPalette)
 
 
 SwordmasterClassCardFile:
-#incext Png2Dmp "Swordmaster.png" --lz77
+#incbin "Dmp/Swordmaster.dmp"
 
 SwordmasterClassCardPalette:
-#incext Png2Dmp "Swordmaster.png" --palette-only
+#incbin "Dmp/Swordmaster.png_pal.dmp"
 
 setCardEntry(SwordmasterClassCard,SwordmasterClassCardFile,SwordmasterClassCardPalette)
 
 
 RavagerClassCardFile:
-#incext Png2Dmp "Ravager.png" --lz77
+#incbin "Dmp/Ravager.dmp"
 
 RavagerClassCardPalette:
-#incext Png2Dmp "Ravager.png" --palette-only
+#incbin "Dmp/Ravager.png_pal.dmp"
 
 setCardEntry(RavagerClassCard,RavagerClassCardFile,RavagerClassCardPalette)
 
 
 BerserkerClassCardFile:
-#incext Png2Dmp "Berserker.png" --lz77
+#incbin "Dmp/Berserker.dmp"
 
 BerserkerClassCardPalette:
-#incext Png2Dmp "Berserker.png" --palette-only
+#incbin "Dmp/Berserker.png_pal.dmp"
 
 setCardEntry(BerserkerClassCard,BerserkerClassCardFile,BerserkerClassCardPalette)
 
 
 FalcoknightClassCardFile:
-#incext Png2Dmp "Falcoknight.png" --lz77
+#incbin "Dmp/Falcoknight.dmp"
 
 FalcoknightClassCardPalette:
-#incext Png2Dmp "Falcoknight.png" --palette-only
+#incbin "Dmp/Falcoknight.png_pal.dmp"
 
 setCardEntry(FalcoknightClassCard,FalcoknightClassCardFile,FalcoknightClassCardPalette)
 
 
 SeraphKnightClassCardFile:
-#incext Png2Dmp "SeraphKnight.png" --lz77
+#incbin "Dmp/SeraphKnight.dmp"
 
 SeraphKnightClassCardPalette:
-#incext Png2Dmp "SeraphKnight.png" --palette-only
+#incbin "Dmp/SeraphKnight.png_pal.dmp"
 
 setCardEntry(SeraphKnightClassCard,SeraphKnightClassCardFile,SeraphKnightClassCardPalette)
 
 
 KinshiKnightClassCardFile:
-#incext Png2Dmp "KinshiKnight.png" --lz77
+#incbin "Dmp/KinshiKnight.dmp"
 
 KinshiKnightClassCardPalette:
-#incext Png2Dmp "KinshiKnight.png" --palette-only
+#incbin "Dmp/KinshiKnight.png_pal.dmp"
 
 setCardEntry(KinshiKnightClassCard,KinshiKnightClassCardFile,KinshiKnightClassCardPalette)
 
 
 WyvernLordClassCardFile:
-#incext Png2Dmp "WyvernLord.png" --lz77
+#incbin "Dmp/WyvernLord.dmp"
 
 WyvernLordClassCardPalette:
-#incext Png2Dmp "WyvernLord.png" --palette-only
+#incbin "Dmp/WyvernLord.png_pal.dmp"
 
 setCardEntry(WyvernLordClassCard,WyvernLordClassCardFile,WyvernLordClassCardPalette)
 
 
 QilinKnightClassCardFile:
-#incext Png2Dmp "QilinKnight.png" --lz77
+#incbin "Dmp/QilinKnight.dmp"
 
 QilinKnightClassCardPalette:
-#incext Png2Dmp "QilinKnight.png" --palette-only
+#incbin "Dmp/QilinKnight.png_pal.dmp"
 
 setCardEntry(QilinKnightClassCard,QilinKnightClassCardFile,QilinKnightClassCardPalette)
 
 
 ScaleguardClassCardFile:
-#incext Png2Dmp "Scaleguard.png" --lz77
+#incbin "Dmp/Scaleguard.dmp"
 
 ScaleguardClassCardPalette:
-#incext Png2Dmp "Scaleguard.png" --palette-only
+#incbin "Dmp/Scaleguard.png_pal.dmp"
 
 setCardEntry(ScaleguardClassCard,ScaleguardClassCardFile,ScaleguardClassCardPalette)
 
 
 ThunderSageClassCardFile:
-#incext Png2Dmp "ThunderSage.png" --lz77
+#incbin "Dmp/ThunderSage.dmp"
 
 ThunderSageClassCardPalette:
-#incext Png2Dmp "ThunderSage.png" --palette-only
+#incbin "Dmp/ThunderSage.png_pal.dmp"
 
 setCardEntry(ThunderSageClassCard,ThunderSageClassCardFile,ThunderSageClassCardPalette)
 
 
 FireSageClassCardFile:
-#incext Png2Dmp "FireSage.png" --lz77
+#incbin "Dmp/FireSage.dmp"
 
 FireSageClassCardPalette:
-#incext Png2Dmp "FireSage.png" --palette-only
+#incbin "Dmp/FireSage.png_pal.dmp"
 
 setCardEntry(FireSageClassCard,FireSageClassCardFile,FireSageClassCardPalette)
 
 
 WindSageClassCardFile:
-#incext Png2Dmp "WindSage.png" --lz77
+#incbin "Dmp/WindSage.dmp"
 
 WindSageClassCardPalette:
-#incext Png2Dmp "WindSage.png" --palette-only
+#incbin "Dmp/WindSage.png_pal.dmp"
 
 setCardEntry(WindSageClassCard,WindSageClassCardFile,WindSageClassCardPalette)
 
 
 WindcallerClassCardFile:
-#incext Png2Dmp "Windcaller.png" --lz77
+#incbin "Dmp/Windcaller.dmp"
 
 WindcallerClassCardPalette:
-#incext Png2Dmp "Windcaller.png" --palette-only
+#incbin "Dmp/Windcaller.png_pal.dmp"
 
 setCardEntry(WindcallerClassCard,WindcallerClassCardFile,WindcallerClassCardPalette)
 
 
 DiabolistClassCardFile:
-#incext Png2Dmp "Diabolist.png" --lz77
+#incbin "Dmp/Diabolist.dmp"
 
 DiabolistClassCardPalette:
-#incext Png2Dmp "Diabolist.png" --palette-only
+#incbin "Dmp/Diabolist.png_pal.dmp"
 
 setCardEntry(DiabolistClassCard,DiabolistClassCardFile,DiabolistClassCardPalette)
 
 
 ValkyrieClassCardFile:
-#incext Png2Dmp "Valkyrie.png" --lz77
+#incbin "Dmp/Valkyrie.dmp"
 
 ValkyrieClassCardPalette:
-#incext Png2Dmp "Valkyrie.png" --palette-only
+#incbin "Dmp/Valkyrie.png_pal.dmp"
 
 setCardEntry(ValkyrieClassCard,ValkyrieClassCardFile,ValkyrieClassCardPalette)
 
 
 GreatLordClassCardFile:
-#incext Png2Dmp "GreatLord.png" --lz77
+#incbin "Dmp/GreatLord.dmp"
 
 GreatLordClassCardPalette:
-#incext Png2Dmp "GreatLord.png" --palette-only
+#incbin "Dmp/GreatLord.png_pal.dmp"
 
 setCardEntry(GreatLordClassCard,GreatLordClassCardFile,GreatLordClassCardPalette)

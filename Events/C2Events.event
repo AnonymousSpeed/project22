@@ -39,9 +39,13 @@ VillageEventItem(C2VillageText,Village,RedGem)
 //We forgot to put keys in item table, put back later
 Ch2Vendor:
 SHLI Wind Fire Thunder Soothe Heal Vulnerary //DoorKey ChestKey
+BYTE 0x0 0x0
+ALIGN 4
 
 Ch2Armory:
 SHLI BronzeSword BronzeLance BronzeAxe BronzeBow 
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 DefeatBoss(EndingScene)
@@ -86,6 +90,7 @@ UNIT C2Generics Deserter   C2Boss Level(1,Enemy,True) [4,8] 0x0 0x0 0x0 0x0 [Iro
 //UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [0,9] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
 UNIT C2Generics FireMage   C2Boss Level(1,Enemy,True) [3,11] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT C2Generics Archer   C2Boss Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
+UNIT
 
 EnemyUnits2:
 UNIT C2Generics Myrmidon  C2Boss Level(1,Enemy,True) [12,3] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
@@ -101,6 +106,7 @@ UNIT
 
 PureWaterDesertTreasure:
 GiveItem(PureWater,0xFFFF)
+NoFade
 ENDA
 
 BeginningScene:
@@ -112,10 +118,12 @@ LOAD1 0x1 EnemyUnits2
 ENUN
 LOAD1 0x1 NewPlayers
 ENUN
+NoFade
 ENDA
 
 EndingScene:
-MoveToChapter(0x2)
+MoveToChapter(Chapter3)
+NoFade
 ENDA
 
 MESSAGE Events end at offset CURRENTOFFSET

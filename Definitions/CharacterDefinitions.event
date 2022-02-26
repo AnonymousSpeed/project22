@@ -7,12 +7,30 @@
 #define Vulture 0x8
 #define Georgios 0x9
 #define Tzesar 0x0A
+#define Alastore 0xA
 #define Neil 0x0B
+#define Quriyati 0xC
+#define Hehuo 0xD
+#define Colson 0xE
+#define Korina 0xF
+#define Ruya 0x10
+#define Donny 0x11
+#define Zephyrus 0x12
 
 #define C2Boss 0x46
 #define C3Boss 0x47
-#define C2Generics 0x67 
+#define C4Boss 0x48
+#define Lycus 0x49
+#define C1Generics 0x66
+#define C2Generics 0x67
+#define C1Boss 0x68 
 #define C3Generic 0x6E
 #define C3Generic2 0x70
+#define C4Generic 0x71
+#define C5Generic 0x72
+#define C5Conscript 0x73
+#define C5Kratos 0x74
+#define C5Lumberjack 0x75
+#define C5Looter 0x76
 
 #define TzesarNPC 0x6F

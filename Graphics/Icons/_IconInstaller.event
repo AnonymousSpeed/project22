@@ -1,4 +1,4 @@
-
+PUSH
 #define ItemIconSheetOffset 0x5926F4
 #define SetItemIcon(Index) "ORG ItemIconSheetOffset + (Index * 0x80)"
 
@@ -351,3 +351,4 @@
 	SetItemIcon(MemberCard)
 	#incext Png2Dmp "9.Items/MemberCard.png"
 
+POP

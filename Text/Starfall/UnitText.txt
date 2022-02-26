@@ -39,3 +39,15 @@ Neil[X]
 
 ## TzesarNPCName
 Tzesar's[X]
+
+## HehuoName
+Hehuo[X]
+
+## QuriyatiName
+Hehuo[X]
+
+## ColsonName
+Colson[X]
+
+## KorinaName
+Korina[X]

@@ -1,0 +1,201 @@
+EventPointerTable(AssetCh05Data, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+
+TurnBasedEvents:
+TurnEventNPC(0,CheckConscriptsFlee,1,255)
+TurnEventPlayer(13, BrigandSpawnEvent, 3)
+TurnEventPlayer(12, ThiefSpawnEvent, 6)
+END_MAIN
+
+CheckConscriptsFlee:
+CHECK_EVENTID 9 //lycus door event
+BEQ 1 s0 sC
+	ENUF 9 //change their ai to escape and turn them green
+LABEL 1
+NoFade
+ENDA
+
+BrigandSpawnEvent:
+LOAD1 1 BrigandGroup //loads in and warns of their partner ransacking the fort
+ENUN
+NoFade
+ENDA
+
+ThiefSpawnEvent:
+LOAD1 1 ThiefGroup //loads inside fort and takes the loot
+ENUN
+NoFade
+ENDA
+
+BrigandGroup:
+UNIT C5Looter Brigand 0 Level(5,Enemy,True) [17,13] 0 0 0 0 [IronAxe] LootOnlyThenEscapeAI
+UNIT
+
+ThiefGroup:
+UNIT C5Looter Thief 0 Level(5,Enemy,True) [9,2] 0 0 0 0 [IronSword] LootOnlyThenEscapeAI
+UNIT
+
+CharacterBasedEvents:
+CharacterEventBothWays(11, KratosKorinaTalk, C5Kratos, Korina)
+CharacterEventBothWays(14, EsmeColsonTalk, Esme, Colson)
+END_MAIN
+
+EsmeColsonTalk: //turns colson blue and makes his buddies stationary
+CUSA Colson
+NoFade
+ENDA
+
+KratosKorinaTalk: //need talk AI and korina to not attack kratos; kratos retreats after
+CUSA Korina
+NoFade
+ENDA
+
+LocationBasedEvents:
+Chest(Mend,8,1) // for vulture presumably
+Seize(3,1)
+LOCA 0 KratosDoorEvent [12,15] 0x12
+LOCA 9 LycusDoorEvent [6,5] 0x12
+Village(7,TopVillage,14,1)
+Armory(Ch5Armory,1,6)
+END_MAIN
+
+KratosDoorEvent:
+//insert text here; kratos goes to talk with korina (need to add kratos to joshua AI)
+TILECHANGE 6
+NoFade
+ENDA
+
+LycusDoorEvent:
+//insert text here; the conscripts turn green and flee on the next turn
+TILECHANGE 4
+NoFade
+ENDA
+
+TopVillage:
+VillageEventItem(C1VillageText,Village,Elthunder) //alastore bias
+
+ALIGN 4
+Ch5Armory:
+SHLI SteelAxe SteelAxe SteelSword SteelBow
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+AFEV 0 AfterConscriptDies 16
+CauseGameOverIfLordDies
+END_MAIN
+
+AfterConscriptDies: // probably start with 5 conscripts? 4 tiers of reward; all, some (4-3), few (2-1), none (0)
+COUNTER_DEC 0
+NoFade
+ENDA
+
+Dunno1:
+END_MAIN
+
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Esme EsmeLord 0 Level(2,Ally,False) [11,21] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [12,21] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [13,22] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [10,22] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [11,23] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [12,23] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [10,24] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [13,24] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [11,22] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [12,22] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [10,23] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [13,23] 0 0 0 0 [0]     NoAI
+UNIT
+
+GreenUnits:
+UNIT Colson Fighter 0 Level(5,NPC,False) [1,19] 0 0 0 0 [IronAxe, Vulnerary] NoAI
+UNIT C5Lumberjack Fighter Colson Level(3,NPC,True) [0,18] 0 0 0 0 [IronAxe] NoAI
+UNIT C5Lumberjack Fighter Colson Level(3,NPC,True) [2,18] 0 0 0 0 [IronAxe] NoAI
+UNIT C5Kratos Civilian_Child Korina Level(1,NPC,False) [12,13] 0 0 0 0 [0] NoAI
+UNIT
+
+EnemyUnits:
+UNIT Lycus Fighter 0 Level(3,Enemy,False) [3,1] 0 0 0 0 [SteelAxe] StationaryBossAI
+UNIT Korina Myrmidon 0 Level(5, Enemy, False) [5,13] 0 0 0 0 [IronSword, Vulnerary] AttackInRangeAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+COUNTER_SET 0 5
+//starting chapter text goes here
+LOAD1 1 EnemyUnits
+ENUN
+LOAD1 1 GreenUnits
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+COUNTER_CHECK 0 //number of conscripts alive
+SVAL s1 5
+BGT 6 s1 sC //branches if sC is less than 5
+	//gives something if all are alive
+	GOTO 9
+LABEL 6
+SVAL s1 3
+BGT 7 s1 sC
+	//gives something if 4-3 are alive
+	GOTO 9
+LABEL 7
+BEQ 8 s0 sC
+	// gives something if 2-1 are alive
+	GOTO 9
+LABEL 8
+	// gives nothing
+LABEL 9
+CHECK_ALIVE Colson
+BEQ 2 s0 sC
+	CHECK_EVENTID 10 //did a lumberjack die
+	BNE 3 s0 sC
+		//give Colson a Prf here if lumberjacks are alive
+	LABEL 3
+	//colson text with lumberjacks dead; no prf
+LABEL 2
+CHECK_ALIVE Korina
+BEQ 4 s0 sC
+	CHECK_EVENTID 15
+	BNE 5 s0 sC // branches if kratos died
+		//just different text probably
+		GOTO 4
+	LABEL 5
+LABEL 4
+//rest of chapter text goes here
+MNC2 Chapter6
+NoFade
+ENDA

@@ -19,7 +19,7 @@ TurnEventPlayer(0, PrepAIChange, 1,255)
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEvent(0x0, EndingScene, Esme, Oldrik)
+CharacterEvent(0, EndingScene, Esme, Oldrik)
 END_MAIN
 
 ALIGN 4
@@ -43,6 +43,8 @@ DefeatBoss(EndingScene)
 //There is probably some more elegant way of implementing this that I'm not aware of. I'm used to having to bootstrap from FE7.
 END_MAIN
 
+
+
 Dunno:
 END_MAIN
 
@@ -56,11 +58,11 @@ ALIGN 4
 
 //Soothe not yet implemented, giving Esme D staves and Heal for now - change to E once Soothe implemented
 Units:
-UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [7,11] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
-UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [8,11] 0x00 0x00 0x0 0x00 [IronSword] NoAI
-UNIT Oldrik LanceRider 0x00 Level(1, Ally, 0) [6,12] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI
-UNIT Baeric SwordRider 0x00 Level(1, Ally, 0) [10,11] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI
-UNIT Basren BowRider 0x01 Level(1, Ally, 0) [7,12] 0x00 0x00 0x0 0x00 [IronBow, IronLongbow] NoAI
+UNIT Esme EsmeLord 0 Level(1, Ally, 0) [7,11] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(1, Ally, 0) [8,11] 0 0 0 0 [IronSword] NoAI
+UNIT Oldrik LanceRider 0 Level(1, Ally, 0) [6,12] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(1, Ally, 0) [10,11] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0x01 Level(1, Ally, 0) [7,12] 0 0 0 0 [IronBow, IronLongbow] NoAI
 UNIT
 
 
@@ -70,36 +72,155 @@ UNIT
 //boss character deets pending 
 //need to fully setup InfantryLock for Pike later.
 Enemies:
-UNIT 0x68 Deserter 0x01 Level(4, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [IronLance, IronPike] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 Level(3, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
-UNIT 0x66 Mercenary 0x01 Level(3, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
-UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
-UNIT 0x66 Archer 0x01 Level(2, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [7,8] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
-UNIT 0x66 Mercenary 0x01 Level(1, Enemy, 0) [3,10] 0x00 0x00 0x0 0x00 [IronSword] PursueWithoutHeedAI
-UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [12,9] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
+UNIT 0x68 Deserter 0x01 Level(4, Enemy, 0) [12,0] 0 0 0 0 [IronLance, IronPike] AttackInRangeAI
+UNIT 0x66 Brigand 0x01 Level(3, Enemy, 1) [11,1] 0 0 0 0 [IronAxe] BrigandAI
+UNIT 0x66 Mercenary 0x01 Level(3, Enemy, 1) [12,1] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [8,3] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT 0x66 Archer 0x01 Level(2, Enemy, 1) [12,5] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [7,8] 0 0 0 0 [IronAxe] PursueWithoutHeedAI
+UNIT 0x66 Mercenary 0x01 Level(1, Enemy, 0) [3,10] 0 0 0 0 [IronSword] PursueWithoutHeedAI
+UNIT 0x66 Deserter 0x01 Level(2, Enemy, 1) [3,5] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT 0x66 Brigand 0x01 Level(1, Enemy, 0) [12,9] 0 0 0 0 [IronAxe] BrigandAI
 UNIT
+
+BeginningScene:
+//chain of testing defs; ignore if looking at ch 1
+CALL TestingCheckEvent
+LOAD1 1 Units
+ENUN
+LOAD1 1 Enemies
+ENUN
+NoFade
+ENDA
 
 PrepAIChange:
 CHECK_EVENTID 0x8
-BEQ 0x1 0x0 0xC
+BEQ 0x1 0 0xC
 //boss attacked
 	ChangeAI(0x66, 0, 0)
 LABEL 0x1
 NoFade
 ENDA	
 
-BeginningScene:
-LOAD1 1 Units
-ENUN
-LOAD1 1 Enemies
-ENUN
-ENDA
-
 Ch1Village:
 VillageEventItem(C1VillageText,Village,IronBlade)
 
 EndingScene:
-MNC2 0x1
+MoveToChapter(Chapter2)
+NoFade
+ENDA
+
+// unit groups used exclusively for testing
+
+Units1Ch2:
+UNIT Esme EsmeLord 0 Level(2, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(2, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(2, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(2, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(2, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT
+
+Units1Ch3:
+UNIT Esme EsmeLord 0 Level(3, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(3, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(3, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(3, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(3, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider 0 Level(3,Ally,True) [0,5] 0 0 0 0 [BronzeAxe] NoAI
+UNIT Vulture Cleric 0 Level(3,Ally,True) [0,6] 0 0 0 0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary 0 Level(3,Ally,True) [0,7] 0 0 0 0 [IronSword] NoAI
+UNIT 
+
+Units1Ch4:
+UNIT Esme EsmeLord 0 Level(4, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(4, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(4, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(4, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(4, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider 0 Level(4,Ally,True) [0,5] 0 0 0 0 [BronzeAxe] NoAI
+UNIT Vulture Cleric 0 Level(4,Ally,True) [0,6] 0 0 0 0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary 0 Level(4,Ally,True) [0,7] 0 0 0 0 [IronSword] NoAI
+UNIT Alastore ThunderMage 0 Level(4,Ally,True) [0,8] 0 0 0 0 [Thunder, Talisman] NoAI
+UNIT Neil Armor 0 Level(4,Ally,True) [0,9] 0 0 0 0 [IronSword, Javelin, Vulnerary] NoAI
+UNIT 
+
+Units1Ch5:
+UNIT Esme EsmeLord 0 Level(5, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(5, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(5, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(5, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(5, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider 0 Level(5,Ally,True) [0,5] 0 0 0 0 [BronzeAxe] NoAI
+UNIT Vulture Cleric 0 Level(5,Ally,True) [0,6] 0 0 0 0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary 0 Level(5,Ally,True) [0,7] 0 0 0 0 [IronSword] NoAI
+UNIT Alastore ThunderMage 0 Level(5,Ally,True) [0,8] 0 0 0 0 [Thunder, Talisman] NoAI
+UNIT Neil Armor 0 Level(5,Ally,True) [0,9] 0 0 0 0 [IronSword, Javelin, Vulnerary] NoAI
+UNIT Hehuo Deserter 0 Level(5,Ally,True) [1,0] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Quriyati Thief 0 Level(5,Ally,True) [1,1] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT
+
+Units1Ch6:
+UNIT Esme EsmeLord 0 Level(6, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(6, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(6, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(6, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(6, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider 0 Level(6,Ally,True) [0,5] 0 0 0 0 [BronzeAxe] NoAI
+UNIT Vulture Cleric 0 Level(6,Ally,True) [0,6] 0 0 0 0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary 0 Level(6,Ally,True) [0,7] 0 0 0 0 [IronSword] NoAI
+UNIT Alastore ThunderMage 0 Level(6,Ally,True) [0,8] 0 0 0 0 [Thunder, Talisman] NoAI
+UNIT Neil Armor 0 Level(6,Ally,True) [0,9] 0 0 0 0 [IronSword, Javelin, Vulnerary] NoAI
+UNIT Hehuo Deserter 0 Level(6,Ally,True) [1,0] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Quriyati Thief 0 Level(6,Ally,True) [1,1] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Colson Fighter 0 Level(6,Ally,True) [1,2] 0 0 0 0 [SteelAxe, Vulnerary] NoAI
+UNIT Korina Myrmidon 0 Level(6,Ally,True) [1,3] 0 0 0 0 [IronSword, Vulnerary] NoAI 
+UNIT 
+
+Units1Ch7:
+UNIT Esme EsmeLord 0 Level(7, Ally, True) [0,0] 0 0 0 0 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(7, Ally, True) [0,1] 0 0 0 0 [IronSword, PureWater] NoAI
+UNIT Oldrik LanceRider 0 Level(7, Ally, True) [0,2] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric SwordRider 0 Level(7, Ally, True) [0,3] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0 Level(7, Ally, True) [0,4] 0 0 0 0 [IronBow, IronLongbow] NoAI
+UNIT Neritas AxeRider 0 Level(7,Ally,True) [0,5] 0 0 0 0 [BronzeAxe] NoAI
+UNIT Vulture Cleric 0 Level(7,Ally,True) [0,6] 0 0 0 0 [Heal,LightRune,Vulnerary] NoAI
+UNIT Georgios Mercenary 0 Level(7,Ally,True) [0,7] 0 0 0 0 [IronSword] NoAI
+UNIT Alastore ThunderMage 0 Level(7,Ally,True) [0,8] 0 0 0 0 [Thunder, Talisman] NoAI
+UNIT Neil Armor 0 Level(7,Ally,True) [0,9] 0 0 0 0 [IronSword, Javelin, Vulnerary] NoAI
+UNIT Hehuo Deserter 0 Level(7,Ally,True) [1,0] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT Quriyati Thief 0 Level(7,Ally,True) [1,1] 0 0 0 0 [IronSword, Vulnerary] NoAI
+UNIT Colson Fighter 0 Level(7,Ally,True) [1,2] 0 0 0 0 [SteelAxe, Vulnerary] NoAI
+UNIT Korina Myrmidon 0 Level(7,Ally,True) [1,3] 0 0 0 0 [IronSword, Vulnerary] NoAI 
+UNIT 
+
+TestingCheckEvent:
+#ifdef _test_ch2_
+LOAD1 1 Units1Ch2
+ENUN
+MNC2 Chapter2
+NoFade
+ENDB
+#endif
+#ifdef _test_ch3_
+LOAD1 1 Units1Ch3
+ENUN
+MNC2 Chapter3
+NoFade
+ENDB
+#endif
+#ifdef _test_ch4_
+LOAD1 1 Units1Ch4
+ENUN
+MNC2 Chapter4
+NoFade
+ENDB
+#endif
+#ifdef _test_ch5_
+LOAD1 1 Units1Ch5
+ENUN
+MNC2 Chapter5
+NoFade
+ENDB
+#endif
+NoFade
 ENDA
