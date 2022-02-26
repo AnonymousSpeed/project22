@@ -117,7 +117,7 @@ ENDA
 EndingScene:
 LOAD1 0x1 NewAlliesEndRecruit
 ENUN
-MoveToChapter(0x3)
+MoveToChapter(Chapter4)
 ENDA
 
 MESSAGE Events end at offset CURRENTOFFSET

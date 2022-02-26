@@ -21,10 +21,11 @@
 	
 	//Graphics
 	#include "Graphics/_MasterGraphicsInstaller.event"
+    MESSAGE Used graphics space ends at currentOffset
 
     //Events
 	#include "Events/_EventInstaller.event"
-
+    MESSAGE Used event space ends at currentOffset
     //Maps
     #include "Maps/MasterMapInstaller.event"
 	
