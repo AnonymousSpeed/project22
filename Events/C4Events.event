@@ -1,0 +1,142 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable( AssetCh04Data,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, TimeToDie, 8)
+TurnEventPlayer(0, Thenewguy, 1)
+END_MAIN
+ALIGN 32 
+
+CharacterBasedEvents:
+CharacterEvent(9, Recruit, 0, Hehuo)
+END_MAIN
+
+LocationBasedEvents:
+Chest(IronGreatlance,3,11)
+Chest(Hammer,14,8)
+Village(8,Village1,1,5)
+Seize(13, 1)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [6,18] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [4,18] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [5,18] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [7,18] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [8,18] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [4,19] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [5,19] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [6,19] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [7,19] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [8,19] 0x00 0x00 0x0 0x00 [IronSword] NoAI
+UNIT
+
+NewUnits:
+UNIT Quriyati Thief Esme Level(4, Ally, 0) [0,18] 0x0 0x0 0x0 0x0 [IronSword,Vulnerary] NoAI
+UNIT
+
+EnemyUnits:
+UNIT Gangleader ThunderMage   0 Level(6,Enemy,False) [12,1] 0x0 0x0 0x0 0x0 [Elthunder] StationaryBossAI
+UNIT Righthandman ThunderMage   Gangleader Level(6,Enemy,False) [3,0] 0x0 0x0 0x0 0x0 [Thunder, RedGem] StationaryBossAI 
+UNIT C4Generic Deserter   Gangleader Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI 
+UNIT C4Generic Deserter   Gangleader Level(4,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI 
+UNIT C4Generic Deserter   Gangleader Level(4,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI 
+UNIT C4Generic Deserter   Gangleader Level(4,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT C4Generic Brigand   Gangleader Level(4,Enemy,1) [13,11] 0x0 0x0 0x0 0x0 [BronzeAxe] AttackInRangeAI 
+UNIT C4Generic Brigand   Gangleader Level(4,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI 
+UNIT C4Generic Brigand   Gangleader Level(4,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [BronzeAxe] AttackInRangeAI 
+UNIT C4Generic Brigand   Gangleader Level(4,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [BronzeAxe] AttackInRangeAI 
+UNIT C4Generic Mercenary   Gangleader Level(4,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI 
+UNIT C4Generic Mercenary   Gangleader Level(4,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI 
+UNIT C4Generic Mercenary   Gangleader Level(4,Enemy,1) [10,4] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI 
+UNIT C4Generic Mercenary   Gangleader Level(4,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
+UNIT C4Generic Archer   Gangleader Level(4,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI 
+UNIT C4Generic Archer   Gangleader Level(4,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI 
+UNIT C4Generic Armor   Gangleader Level(4,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [Javelin] StationaryBossAI 
+UNIT C4Generic Armor   Gangleader Level(4,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [Javelin] StationaryBossAI 
+UNIT C4Generic Armor   Gangleader Level(4,Enemy,1) [8,3] 0x0 0x0 0x0 0x0 [IronLance, IronSword] TwoActionAI 
+UNIT C4Generic WindMage   Gangleader Level(4,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [Wind] TwoActionAI 
+UNIT C4Generic WindMage   Gangleader Level(4,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [Wind] AttackInRangeAI 
+UNIT FeralStarborn Soldier   0 Level(4,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+UNIT FeralStarborn Soldier   0 Level(4,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [IronLance] PursueWithoutHeedAI
+UNIT FeralStarborn Fighter   0 Level(4,Enemy,1) [9,15] 0x0 0x0 0x0 0x0 [BronzeAxe] AttackInRangeAI
+UNIT FeralStarborn Fighter   0 Level(4,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [BronzeAxe] PursueWithoutHeedAI
+UNIT FeralStarborn Myrmidon   0 Level(4,Enemy,1) [3,15] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT FeralStarborn Myrmidon   0 Level(4,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT FeralStarborn FireMage   0 Level(4,Enemy,1) [10,17] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT FeralStarborn FireMage   0 Level(4,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Hehuo Deserter Esme Level(4,NPC, 0) [12,15] 0x0 0x0 0x0 0x0 [IronLance, Vulnerary] StationaryBossAI
+UNIT
+
+DoomReinforcements:
+UNIT  FeralStarborn Ravager   0 Level(1,Enemy,1) [5,19] 0x0 0x0 0x0 0x0 [KillerLance] PursueWithoutHeedAI
+UNIT  FeralStarborn Swordmaster   0 Level(1,Enemy,1) [6,19] 0x0 0x0 0x0 0x0 [KillingEdge] PursueWithoutHeedAI
+UNIT  FeralStarborn Berserker   0 Level(1,Enemy,1) [7,19] 0x0 0x0 0x0 0x0 [KillerAxe] PursueWithoutHeedAI
+UNIT
+
+TimeToDie:
+CAMERA [6, 19]
+STAL 30
+LOAD1 0x1 DoomReinforcements 
+STAL 30
+NoFade
+ENDA
+
+Village1:
+GiveItem(SecretBook,0xFFFF)
+NoFade
+ENDA
+
+Thenewguy:
+LOAD1 0x1 NewUnits
+NoFade
+ENDA
+
+Recruit:
+CUSA Hehuo
+NoFade
+ENDA
+
+BeginningScene:
+LOAD2 0x1 Units
+LOAD1 0x1 EnemyUnits
+GotoPrepScreen
+NoFade
+ENDA
+
+EndingScene:
+MoveToChapter(Chapter5)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET
