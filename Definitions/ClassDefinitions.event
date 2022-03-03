@@ -151,10 +151,12 @@
 #define Scaleguard_D 85
 #define Valkyrie_D 86
 
-#define Civilian 109
-#define Civilian_F 110
-#define Civilian_Child 111
-#define Civilian_Child_F 112
+#define Civilian_Child 109
+#define Civilian_Child_F 110
+#define Civilian 111
+#define Civilian_F 112
+#define Civilian_2 113
+#define Civilian_2_F 114
 #define Peer 115
 #define Queen 116
 #define Prince 117

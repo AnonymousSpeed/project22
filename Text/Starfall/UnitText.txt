@@ -31,8 +31,8 @@ Osman[X]
 ## ArmelName
 Armel[X]
 
-## TzesarName
-Duke Tzesar[X]
+## AlastoreName
+Alastore[X]
 
 ## NeilName
 Neil[X]
@@ -51,3 +51,21 @@ Colson[X]
 
 ## KorinaName
 Korina[X]
+
+## LycusName
+Lycus[X]
+
+## KratosName
+Kratos[X]
+
+## YulianName
+Yulian[X]
+
+## ConscriptName
+Conscript[X]
+
+## LumberjackName
+Lumberjack[X]
+
+## LooterName
+Looter[X]

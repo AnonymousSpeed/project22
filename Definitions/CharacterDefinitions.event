@@ -21,6 +21,9 @@
 #define C3Boss 0x47
 #define C4Boss 0x48
 #define Lycus 0x49
+#define Nolan 0x4A
+#define Osman 0x4B
+#define Armel 0x4C
 #define C1Generics 0x66
 #define C2Generics 0x67
 #define C1Boss 0x68 

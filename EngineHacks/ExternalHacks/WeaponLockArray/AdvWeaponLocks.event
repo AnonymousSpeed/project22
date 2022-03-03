@@ -32,4 +32,11 @@ BYTE Deserter
 BYTE Soldier
 BYTE EndLockArray
 
+ALIGN 4
+LogSplitterArray:
+BYTE HardCharLock
+BYTE Colson
+BYTE EndLockArray
+
+
 #endif // ADV_WEAPON_LOCKS

@@ -706,4 +706,8 @@ the cost of all items by half.[X]
 If someone with this card[N]
 stops in a suspicious space...[X]
 
+## LogSplitterName
+Log Splitter[X]
 
+## LogSplitterDesc
+A hefty axe that ignores defense.[X]
