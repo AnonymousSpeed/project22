@@ -2,7 +2,7 @@
 #ifndef LAGUZ_BARS_INSTALLED
 #define LAGUZ_BARS_INSTALLED
 
-#include "eastdlib.event"
+#include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
 
 #include "ModuleConfig.event"

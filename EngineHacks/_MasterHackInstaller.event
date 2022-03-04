@@ -198,7 +198,12 @@ POP
   
   ALIGN 4
   #include "Starfall/StarfallHax.event"
-  
+ 
+  //Debug tools
+  #ifdef __DEBUG__
+    #include "DebugTools/_DebugToolsInstaller.event"
+  #endif
+
   ALIGN 4
   #include "Necessary/StatGetters/_InstallStatGetters.event"
   

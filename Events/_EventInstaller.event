@@ -26,6 +26,9 @@
 	#include "C3Events.event"
 }
 {
+	#include "C4Events.event"
+}
+{
 	#include "C5Events.event"
 }
 {

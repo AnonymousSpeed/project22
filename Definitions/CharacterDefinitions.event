@@ -20,8 +20,10 @@
 #define C2Boss 0x46
 #define C3Boss 0x47
 #define C4Boss 0x48
+#define Gangleader C4Boss
 #define Lycus 0x49
-#define Nolan 0x4A
+#define C4SubBoss 0x4A
+#define Righthandman C4SubBoss
 #define Osman 0x4B
 #define Armel 0x4C
 #define C1Generics 0x66
@@ -35,5 +37,6 @@
 #define C5Kratos 0x74
 #define C5Lumberjack 0x75
 #define C5Looter 0x76
+#define FeralStarborn 0x77
 
 #define TzesarNPC 0x6F
