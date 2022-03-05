@@ -1,0 +1,316 @@
+//Scene setting: Esme, Solomin, and Alastore reach the outskirts of Yulian territory, coming across a southern outpost built around a rural village; esme initially off screen
+
+
+## C5BeginningScene1
+[MidLeft][LoadAlastore]
+[MidRight][LoadSolomin][3LB]
+Despite some setbacks, we've finally[N]
+arrived in Yulian territory[Beat] Well,[N]
+if those blazing red flags speak true.[AN]
+[MidLeft]
+Mm, the unmistakable sign of their[N]
+army. Somnville is the first town[N]
+outside of the Zarest-Yulian border,[AN]
+so it's of no surprise that Duke[N]
+Yulian keeps this outpost well-manned.[AN]
+[MidRight]
+A wise lord, then. I'd not trust[N]
+a neighboring house's sweet words,[N]
+not without an army at my back.[AN]
+[MidLeft]
+Loathe as I am to admit it, Hedera's[N]
+history of conflict between the[N]
+noble houses reinforces that notion.[AN]
+Before the fall, we knew peace, but[Beat][AN][X]
+
+//Esme walks up
+
+## C5BeginningScene2
+[FarLeft][LoadAlastore]
+[Left][LoadSolomin]
+[MidRight][LoadEsme]
+House Yulian discarded it, and this[N]
+town will see bloodshed once more.[AN]
+The leader of their forces rejected[N]
+our parley, so we have no choice now.[A]
+[Left]
+Blasted fool[Beat] He'd sacrifice his men[N]
+in the face of an unwinnable fight?[A]
+[MidRight]
+His men, and Somnville's civilians.[N]
+Based on reports from our scouts,[AN]
+the citizenry have taken up arms,[N]
+doubtless with a lance behind them.[AN]
+[FarLeft][3LB]
+We should spare as many of them as we[N]
+can, milady. The blame lies not with[N]
+them for their lord's failures.[AN]
+[MidRight][2LB]
+Agreed. Perhaps they'll even repay us[N]
+for our good will[Beat] Regardless,[AN]
+our task is clear:[A] cut through the town[N]
+and take the outpost for ourselves.[AN]
+Follow my lead![AN][X]
+
+
+//End of convo; esme, solomin, alastore all move towards the town to deployment positions; cuts to the town; first, to the enemy leader with Osman; and then colson and Korina
+
+## C5BeginningScene3
+[MidLeft][LoadOsman]
+[MidRight][LoadLycus]
+Sir! The preparations you recommended[N]
+are complete. We're ready for them.[A]
+[MidLeft]
+Good. I must return to Duke Yulian's side,[N]
+so the rest is up to you, Captain Lycus.[A]
+[MidRight][1LB]
+I won't fail you, Chancellor Osman.[A]
+[MidLeft][3LB]
+See to it that you don't. Otherwise[Beat][N]
+I cannot guarantee you'll keep your[N]
+position or your life. Keep this in mind.[AN][X]
+
+//Osman leaves
+
+## C5BeginningScene4
+[MidRight][LoadLycus][3LB]
+[Beat]He's even more unpleasant than usual,[N]
+but orders are orders. Soldiers, to arms![N]
+Don't let a single enemy pass you by,[AN]
+even if it kills you. If any conscripts[N]
+have cold feet, then remind them that[N]
+retreat only leads to a different grave![AN][X]
+
+//Pans to Korina (red) outside of his sister's cell
+
+## C5BeginningScene5
+[MidLeft][LoadKratos]
+[MidRight][LoadKorina]
+[MidLeft]
+Please, Korina![N]
+Don't go out there.[AN]
+[MidRight]
+I don't have a choice, Kratos.[N]
+For your sake, I have to do this.[A][CloseSpeechSlow]
+[MidLeft][MoveFarLeft]
+[MidRight][MoveLeft][ClearFace][Left][LoadKorina]
+[MidRight][LoadSoldier][3LB]
+That's right. If you want to see your[N]
+brother safe again, you'll follow[N]
+Captain Lycus's orders, sellsword.[A]
+[Left][1LB]
+Fine. I'll do as you say, for now[Beat][A][X]
+
+//Korina leaves
+
+## C5BeginningScene6
+[MidRight][LoadKorina]
+Dastard[Beat] The moment he's free,[N]
+I'll turn my sword on Lycus next.[A][X]
+
+//Pan to Colson and some greens
+
+## C5BeginningScene7
+[FarLeft][LoadLumberjack1]
+[Left][LoadLumberjack2]
+[MidRight][LoadColson]
+[FarLeft][3LB]
+Ya sure about this, Colson? Those[N]
+soldiers are after us now. Maybe[N]
+we should just go along with 'em.[A]
+[MidRight]
+No. If we fall in with the soldiers,[N]
+y'all ain't goin' anywhere except[N]
+right into House Luiza's blades.[A]
+[Left]
+And we ain't gonna eat dirt fighting off[N]
+the soldiers instead? I don't wanna[N]
+die, boss, but I can't see a way out![A]
+[MidRight]
+Easy, Cid. We'll fight 'em off til the[N]
+Luiza army comes our way and bails us[N]
+out. If they don't make it in time[Beat][AN]
+Then it was nice knowin' ya, fellas.[A][X]
+
+//End of start event
+
+
+//End event
+## C5EndingScene1
+[FarLeft][LoadAlastore]
+[Left][LoadSolomin]
+[MidRight][LoadEsme][3LB]
+Good work, everyone. We've conquered[N]
+our first obstacle in ending Luiza's[N]
+aggression, but more are yet to come.[AN]
+[FarLeft][2LB]
+True, but it makes victory no less sweet.[N]
+Your leadership proved essential, Lady Esme.[AN]
+[MidRight]
+As did your valor and soldiers,[N]
+Lord Alastore. We make a good team.[A]
+[Left]
+It wouldn't be a conversation between[N]
+nobles without needless compliments[Beat][AN]
+Hold a moment. We've got a lone traveler[N]
+coming from the way we came in to town.[AN]
+[MidRight][1LB]
+Just one? Odd timing[Beat] who are they?[A]
+[Left][2LB]
+Only one way to find out, eh?[N]
+Let's greet our uninvited guest.[A][X]
+
+//The group goes back to the gate; meets Jerolde ? (Oldest son of Duke Yulian)
+
+## C5EndingScene2
+[3MugsOnRight]
+[FarLeft][LoadJerolde]
+[Right][LoadFaceFancy][0x2][0x1][0x80][0x01][0x02][0x01][0x01][0xD]
+[MidRight][LoadAlastore][FarRight][LoadSolomin]
+[Right]
+Hm? Wait[Beat] Jerolde, is that you?[N]
+What are you doing here?[A]
+[FarLeft][3LB]
+It's been a long time, Esme. I see the[N]
+tales of your courage are true. I made[N]
+the right choice in finding you, friend.[A]
+[FarRight][2LB]
+Why's the son of Duke Yulian thanking us[N]
+when we've just taken some of his land?[A]
+[MidRight][3LB]
+True, that is odd[Beat] but even moreso,[N]
+what happened to you, Lord Jerolde?[N]
+Your armor looks ready to fall apart.[A]
+[FarLeft]
+Ah, you all don't know. My father[Beat][N]
+is no longer with us. I've been on the[N]
+run ever since I heard of his death.[A]
+[Right][1LB]
+What?! Then who's leading House Yulian?[A]
+[FarLeft][2LB]
+Armel, the cur. While I visited nearby[N]
+allies, a coup claimed my father's life.[AN]
+My traitorous younger brother strode in[N]
+and claimed the throne in my absence.[AN]
+[Right]
+That's[Beat] I'm very sorry to hear that.[N]
+Duke Yulian deserved better than this.[A]
+[FarRight][3LB]
+Well, it explains why House Yulian's[N]
+actions seemed strange. The foolish[N]
+younger son doesn't know what he's doing.[AN]
+[FarLeft]
+He's done his best to have me killed,[N]
+but no luck so far. Still, his efforts,[N]
+along with this hostile new world,[AN]
+have taken a toll. I can barely stand,[N]
+let alone fight beside your band.[A]
+[MidRight]
+It is a true shame that you cannot.[N]
+We would have been well served[N]
+with the duke's son at our side.[AN]
+[Right]
+Are you certain Armel orchestrated this?[N]
+Pardon me, but it is difficult to imagine[N]
+that the boy possesses a shred of cunning.[A]
+[FarLeft][2LB]
+It's true that he's not the sharpest.[N]
+Still, if not him, then who else?[A]
+[Right]
+A puppeteer who pulls his strings,[N]
+perhaps[Beat] Well, it matters not.[AN]
+I pledge to unseat him and put[N]
+the rightful heir on the throne.[AN]
+[FarLeft]
+[Beat]Thank you, Esme.[N]
+I am forever in your debt.[A]
+[Right]
+We can talk about repayment later.[N]
+For now, let us continue our march.[A]
+[FarLeft]
+Right. Lord Alastore, if you could fill[N]
+me in on the situation, I'd appreciate it.[A]
+[MidRight][1LB]
+Of course. Where to begin[Beat][A][X]
+
+//The two walk off, leaving solomin and esme alone
+
+## C5EndingScene3
+[MidLeft][LoadSolomin]
+[MidRight][LoadEsme][3LB]
+Jerolde's return is a stroke of good[N]
+luck, eh? If we return his throne[N]
+to him, our future will be bright.[AN]
+Perhaps we'll even be able to bring[N]
+House Yulian under our banner[Beat][N]
+What do you think, Solomin?[A]
+[MidLeft][2LB]
+Who knows? An old friend he may be,[N]
+but he's may not be eager to cooperate.[A]
+[MidRight][3LB]
+Perhaps not, but House Yulian's debt[N]
+only grows. His honor will demand[N]
+that he repay us by the conflict's end.[AN]
+[MidLeft]
+If that's how you'd speak of a friend[N]
+who owes you one, I'd hate to see[N]
+what you have planned for Alastore.[AN]
+[MidRight][2LB]
+Is it wrong to expect that one who[N]
+requires aid should return the favor?[AN]
+Past Luiza heirs played the selfless[N]
+act at the expense of our house,[AN]
+but I will not make the same[N]
+mistakes as my forebearers.[A]
+[MidLeft][3LB]
+Take care not to make new ones either.[N]
+Thinking of everyone in terms of[N]
+what you'll gain from them[Beat][AN]
+going down that path will leave you[N]
+with no true allies in the end, Esme.[A]
+[MidRight]
+I'll keep that in mind, Solomin[Beat][N]
+We've spent enough time talking.[N]
+Let's catch up to the others.[A][X]
+
+## C5AllConscriptsSpared
+[X]
+
+## C5SomeConscriptsSpared
+[X]
+
+## C5NoConscriptsSpared
+[X]
+
+## C5ColsonLumberjackSendoff
+[X]
+
+## C5ColsonNoLumberjackSendoff
+[X]
+
+## C5KorinaKratosSendoffText
+[X]
+
+## C5KorinaLeavesText
+[X]
+
+## C5LycusDoor
+[X]
+
+## C5KratosDoor
+[X]
+
+## C5VillageText
+[X]
+
+## C5EsmeColsonRecruit
+[X]
+
+## C5KratosKorinaRecruit
+[X]
+
+## C5BrigandThiefWarning
+[X]
+
+## C5ConscriptsFlee
+[X]
