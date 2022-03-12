@@ -3,352 +3,352 @@ PUSH
 #define SetItemIcon(Index) "ORG ItemIconSheetOffset + (Index * 0x80)"
 
 	SetItemIcon(BronzeSword)
-	#incext Png2Dmp "1.Swords/BronzeSword.png"
+	#incbin "1.Swords/BronzeSword.dmp"
 
 	SetItemIcon(IronSword)
-	#incext Png2Dmp "1.Swords/IronSword.png"
+	#incbin "1.Swords/IronSword.dmp"
 
 	SetItemIcon(SteelSword)
-	#incext Png2Dmp "1.Swords/SteelSword.png"
+	#incbin "1.Swords/SteelSword.dmp"
 
 	SetItemIcon(SilverSword)
-	#incext Png2Dmp "1.Swords/SilverSword.png"
+	#incbin "1.Swords/SilverSword.dmp"
 
 	SetItemIcon(T1KillerSword)
-	#incext Png2Dmp "1.Swords/T1KillerSword.png"
+	#incbin "1.Swords/T1KillerSword.dmp"
 
 	SetItemIcon(Wyrmslayer)
-	#incext Png2Dmp "1.Swords/Wyrmslayer.png"
+	#incbin "1.Swords/Wyrmslayer.dmp"
 
 	SetItemIcon(Armorslayer)
-	#incext Png2Dmp "1.Swords/Armorslayer.png"
+	#incbin "1.Swords/Armorslayer.dmp"
 
 	SetItemIcon(KillingEdge)
-	#incext Png2Dmp "1.Swords/KillingEdge.png"
+	#incbin "1.Swords/KillingEdge.dmp"
 
 	SetItemIcon(BraveSword)
-	#incext Png2Dmp "1.Swords/BraveSword.png"
+	#incbin "1.Swords/BraveSword.dmp"
 
 	SetItemIcon(IronBlade)
-	#incext Png2Dmp "1.Swords/IronBlade.png"
+	#incbin "1.Swords/IronBlade.dmp"
 
 	SetItemIcon(SteelBlade)
-	#incext Png2Dmp "1.Swords/SteelBlade.png"
+	#incbin "1.Swords/SteelBlade.dmp"
 
 	SetItemIcon(WoDao)
-	#incext Png2Dmp "1.Swords/WoDao.png"
+	#incbin "1.Swords/WoDao.dmp"
 
 
 
 	SetItemIcon(BronzeLance)
-	#incext Png2Dmp "2.Lances/BronzeLance.png"
+	#incbin "2.Lances/BronzeLance.dmp"
 
 	SetItemIcon(IronLance)
-	#incext Png2Dmp "2.Lances/IronLance.png"
+	#incbin "2.Lances/IronLance.dmp"
 
 	SetItemIcon(SteelLance)
-	#incext Png2Dmp "2.Lances/SteelLance.png"
+	#incbin "2.Lances/SteelLance.dmp"
 
 	SetItemIcon(SilverLance)
-	#incext Png2Dmp "2.Lances/SilverLance.png"
+	#incbin "2.Lances/SilverLance.dmp"
 
 	SetItemIcon(T1KillerLance)
-	#incext Png2Dmp "2.Lances/T1KillerLance.png"
+	#incbin "2.Lances/T1KillerLance.dmp"
 
 	SetItemIcon(Horseslayer)
-	#incext Png2Dmp "2.Lances/Horseslayer.png"
+	#incbin "2.Lances/Horseslayer.dmp"
 
 	SetItemIcon(HeavySpear)
-	#incext Png2Dmp "2.Lances/HeavySpear.png"
+	#incbin "2.Lances/HeavySpear.dmp"
 
 	SetItemIcon(KillerLance)
-	#incext Png2Dmp "2.Lances/KillerLance.png"
+	#incbin "2.Lances/KillerLance.dmp"
 
 	SetItemIcon(BraveLance)
-	#incext Png2Dmp "2.Lances/BraveLance.png"
+	#incbin "2.Lances/BraveLance.dmp"
 
 	SetItemIcon(IronGreatlance)
-	#incext Png2Dmp "2.Lances/IronGreatlance.png"
+	#incbin "2.Lances/IronGreatlance.dmp"
 
 	SetItemIcon(SteelGreatlance)
-	#incext Png2Dmp "2.Lances/SteelGreatlance.png"
+	#incbin "2.Lances/SteelGreatlance.dmp"
 
 	SetItemIcon(IronPike)
-	#incext Png2Dmp "2.Lances/IronPike.png"
+	#incbin "2.Lances/IronPike.dmp"
 
 	SetItemIcon(SteelPike)
-	#incext Png2Dmp "2.Lances/SteelPike.png"
+	#incbin "2.Lances/SteelPike.dmp"
 
 	SetItemIcon(Javelin)
-	#incext Png2Dmp "2.Lances/Javelin.png"
+	#incbin "2.Lances/Javelin.dmp"
 
 	SetItemIcon(Spear)
-	#incext Png2Dmp "2.Lances/Spear.png"
+	#incbin "2.Lances/Spear.dmp"
 
 
 
 	SetItemIcon(BronzeAxe)
-	#incext Png2Dmp "3.Axes/BronzeAxe.png"
+	#incbin "3.Axes/BronzeAxe.dmp"
 
 	SetItemIcon(IronAxe)
-	#incext Png2Dmp "3.Axes/IronAxe.png"
+	#incbin "3.Axes/IronAxe.dmp"
 
 	SetItemIcon(SteelAxe)
-	#incext Png2Dmp "3.Axes/SteelAxe.png"
+	#incbin "3.Axes/SteelAxe.dmp"
 
 	SetItemIcon(SilverAxe)
-	#incext Png2Dmp "3.Axes/SilverAxe.png"
+	#incbin "3.Axes/SilverAxe.dmp"
 
 	SetItemIcon(T1KillerAxe)
-	#incext Png2Dmp "3.Axes/T1KillerAxe.png"
+	#incbin "3.Axes/T1KillerAxe.dmp"
 
 	SetItemIcon(Hammer)
-	#incext Png2Dmp "3.Axes/Hammer.png"
+	#incbin "3.Axes/Hammer.dmp"
 
 	SetItemIcon(Wingclipper)
-	#incext Png2Dmp "3.Axes/Wingclipper.png"
+	#incbin "3.Axes/Wingclipper.dmp"
 
 	SetItemIcon(KillerAxe)
-	#incext Png2Dmp "3.Axes/KillerAxe.png"
+	#incbin "3.Axes/KillerAxe.dmp"
 
 	SetItemIcon(BraveAxe)
-	#incext Png2Dmp "3.Axes/BraveAxe.png"
+	#incbin "3.Axes/BraveAxe.dmp"
 
 	SetItemIcon(IronPoleaxe)
-	#incext Png2Dmp "3.Axes/IronPoleaxe.png"
+	#incbin "3.Axes/IronPoleaxe.dmp"
 
 	SetItemIcon(SteelPoleaxe)
-	#incext Png2Dmp "3.Axes/SteelPoleaxe.png"
+	#incbin "3.Axes/SteelPoleaxe.dmp"
 
 	SetItemIcon(HandAxe)
-	#incext Png2Dmp "3.Axes/HandAxe.png"
+	#incbin "3.Axes/HandAxe.dmp"
 
 	SetItemIcon(Tomahawk)
-	#incext Png2Dmp "3.Axes/Tomahawk.png"
+	#incbin "3.Axes/Tomahawk.dmp"
 
 
 
 	SetItemIcon(BronzeBow)
-	#incext Png2Dmp "4.Bows/BronzeBow.png"
+	#incbin "4.Bows/BronzeBow.dmp"
 
 	SetItemIcon(IronBow)
-	#incext Png2Dmp "4.Bows/IronBow.png"
+	#incbin "4.Bows/IronBow.dmp"
 
 	SetItemIcon(SteelBow)
-	#incext Png2Dmp "4.Bows/SteelBow.png"
+	#incbin "4.Bows/SteelBow.dmp"
 
 	SetItemIcon(SilverBow)
-	#incext Png2Dmp "4.Bows/SilverBow.png"
+	#incbin "4.Bows/SilverBow.dmp"
 
 	SetItemIcon(T1KillerBow)
-	#incext Png2Dmp "4.Bows/T1KillerBow.png"
+	#incbin "4.Bows/T1KillerBow.dmp"
 
 	SetItemIcon(KillerBow)
-	#incext Png2Dmp "4.Bows/KillerBow.png"
+	#incbin "4.Bows/KillerBow.dmp"
 
 	SetItemIcon(BraveBow)
-	#incext Png2Dmp "4.Bows/BraveBow.png"
+	#incbin "4.Bows/BraveBow.dmp"
 
 	SetItemIcon(IronLongbow)
-	#incext Png2Dmp "4.Bows/IronLongbow.png"
+	#incbin "4.Bows/IronLongbow.dmp"
 
 	SetItemIcon(SteelLongbow)
-	#incext Png2Dmp "4.Bows/SteelLongbow.png"
+	#incbin "4.Bows/SteelLongbow.dmp"
 
 	SetItemIcon(AntiMageBow)
-	#incext Png2Dmp "4.Bows/AntiMageBow.png"
+	#incbin "4.Bows/AntiMageBow.dmp"
 
 	SetItemIcon(ArcaneBow)
-	#incext Png2Dmp "4.Bows/ArcaneBow.png"
+	#incbin "4.Bows/ArcaneBow.dmp"
 
 	SetItemIcon(RapierBow)
-	#incext Png2Dmp "4.Bows/RapierBow.png"
+	#incbin "4.Bows/RapierBow.dmp"
 
 
 
 	SetItemIcon(Thunder)
-	#incext Png2Dmp "5.Thunder/Thunder.png"
+	#incbin "5.Thunder/Thunder.dmp"
 
 	SetItemIcon(Elthunder)
-	#incext Png2Dmp "5.Thunder/Elthunder.png"
+	#incbin "5.Thunder/Elthunder.dmp"
 
 	SetItemIcon(Thoron)
-	#incext Png2Dmp "5.Thunder/Thoron.png"
+	#incbin "5.Thunder/Thoron.dmp"
 
 	SetItemIcon(Bolting)
-	#incext Png2Dmp "5.Thunder/Bolting.png"
+	#incbin "5.Thunder/Bolting.dmp"
 
 	SetItemIcon(ChainVolt)
-	#incext Png2Dmp "5.Thunder/ChainVolt.png"
+	#incbin "5.Thunder/ChainVolt.dmp"
 
 	SetItemIcon(Paralysis)
-	#incext Png2Dmp "5.Thunder/Paralysis.png"
+	#incbin "5.Thunder/Paralysis.dmp"
 
 
 
 	SetItemIcon(Fire)
-	#incext Png2Dmp "6.Fire/Fire.png"
+	#incbin "6.Fire/Fire.dmp"
 
 	SetItemIcon(Elfire)
-	#incext Png2Dmp "6.Fire/Elfire.png"
+	#incbin "6.Fire/Elfire.dmp"
 
 	SetItemIcon(Bolganone)
-	#incext Png2Dmp "6.Fire/Bolganone.png"
+	#incbin "6.Fire/Bolganone.dmp"
 
 	SetItemIcon(Meteor)
-	#incext Png2Dmp "6.Fire/Meteor.png"
+	#incbin "6.Fire/Meteor.dmp"
 
 	SetItemIcon(Beastblaze)
-	#incext Png2Dmp "6.Fire/Beastblaze.png"
+	#incbin "6.Fire/Beastblaze.dmp"
 
 	SetItemIcon(Ragnarok)
-	#incext Png2Dmp "6.Fire/Ragnarok.png"
+	#incbin "6.Fire/Ragnarok.dmp"
 
 
 
 	SetItemIcon(Wind)
-	#incext Png2Dmp "7.Wind/Wind.png"
+	#incbin "7.Wind/Wind.dmp"
 
 	SetItemIcon(Elwind)
-	#incext Png2Dmp "7.Wind/Elwind.png"
+	#incbin "7.Wind/Elwind.dmp"
 
 	SetItemIcon(Tornado)
-	#incext Png2Dmp "7.Wind/Tornado.png"
+	#incbin "7.Wind/Tornado.dmp"
 
 	SetItemIcon(Blizzard)
-	#incext Png2Dmp "7.Wind/Blizzard.png"
+	#incbin "7.Wind/Blizzard.dmp"
 
 	SetItemIcon(Aircalibur)
-	#incext Png2Dmp "7.Wind/Aircalibur.png"
+	#incbin "7.Wind/Aircalibur.dmp"
 
 	SetItemIcon(ValorousGale)
-	#incext Png2Dmp "7.Wind/ValorousGale.png"
+	#incbin "7.Wind/ValorousGale.dmp"
 
 
 
 	SetItemIcon(Soothe)
-	#incext Png2Dmp "8.Staves/Soothe.png"
+	#incbin "8.Staves/Soothe.dmp"
 
 	SetItemIcon(Heal)
-	#incext Png2Dmp "8.Staves/Heal.png"
+	#incbin "8.Staves/Heal.dmp"
 
 	SetItemIcon(Mend)
-	#incext Png2Dmp "8.Staves/Mend.png"
+	#incbin "8.Staves/Mend.dmp"
 
 	SetItemIcon(Recover)
-	#incext Png2Dmp "8.Staves/Recover.png"
+	#incbin "8.Staves/Recover.dmp"
 
 	SetItemIcon(Restore)
-	#incext Png2Dmp "8.Staves/Restore.png"
+	#incbin "8.Staves/Restore.dmp"
 
 	SetItemIcon(Physic)
-	#incext Png2Dmp "8.Staves/Physic.png"
+	#incbin "8.Staves/Physic.dmp"
 
 	SetItemIcon(Fortify)
-	#incext Png2Dmp "8.Staves/Fortify.png"
+	#incbin "8.Staves/Fortify.dmp"
 
 	SetItemIcon(Freeze)
-	#incext Png2Dmp "8.Staves/Freeze.png"
+	#incbin "8.Staves/Freeze.dmp"
 
 	SetItemIcon(Numb)
-	#incext Png2Dmp "8.Staves/Numb.png"
+	#incbin "8.Staves/Numb.dmp"
 
 	SetItemIcon(Silence)
-	#incext Png2Dmp "8.Staves/Silence.png"
+	#incbin "8.Staves/Silence.dmp"
 
 	SetItemIcon(Berserk)
-	#incext Png2Dmp "8.Staves/Berserk.png"
+	#incbin "8.Staves/Berserk.dmp"
 
 	SetItemIcon(Slow)
-	#incext Png2Dmp "8.Staves/Slow.png"
+	#incbin "8.Staves/Slow.dmp"
 
 	SetItemIcon(Barrier)
-	#incext Png2Dmp "8.Staves/Barrier.png"
+	#incbin "8.Staves/Barrier.dmp"
 
 	SetItemIcon(LightRune)
-	#incext Png2Dmp "8.Staves/LightRune.png"
+	#incbin "8.Staves/LightRune.dmp"
 
 	SetItemIcon(Warp)
-	#incext Png2Dmp "8.Staves/Warp.png"
+	#incbin "8.Staves/Warp.dmp"
 
 	SetItemIcon(Rescue)
-	#incext Png2Dmp "8.Staves/Rescue.png"
+	#incbin "8.Staves/Rescue.dmp"
 
 	SetItemIcon(Swarp)
-	#incext Png2Dmp "8.Staves/Swarp.png"
+	#incbin "8.Staves/Swarp.dmp"
 
 	SetItemIcon(Unlock)
-	#incext Png2Dmp "8.Staves/Unlock.png"
+	#incbin "8.Staves/Unlock.dmp"
 
 
 
 	SetItemIcon(AngelicRobe)
-	#incext Png2Dmp "9.Items/AngelicRobe.png"
+	#incbin "9.Items/AngelicRobe.dmp"
 
 	SetItemIcon(EnergyRing)
-	#incext Png2Dmp "9.Items/EnergyRing.png"
+	#incbin "9.Items/EnergyRing.dmp"
 
 	SetItemIcon(SpiritDust)
-	#incext Png2Dmp "9.Items/SpiritDust.png"
+	#incbin "9.Items/SpiritDust.dmp"
 
 	SetItemIcon(SecretBook)
-	#incext Png2Dmp "9.Items/SecretBook.png"
+	#incbin "9.Items/SecretBook.dmp"
 
 	SetItemIcon(Speedwing)
-	#incext Png2Dmp "9.Items/Speedwing.png"
+	#incbin "9.Items/Speedwing.dmp"
 
 	SetItemIcon(GoddessIcon)
-	#incext Png2Dmp "9.Items/GoddessIcon.png"
+	#incbin "9.Items/GoddessIcon.dmp"
 
 	SetItemIcon(Dragonshield)
-	#incext Png2Dmp "9.Items/Dragonshield.png"
+	#incbin "9.Items/Dragonshield.dmp"
 
 	SetItemIcon(Talisman)
-	#incext Png2Dmp "9.Items/Talisman.png"
+	#incbin "9.Items/Talisman.dmp"
 
 	SetItemIcon(Boots)
-	#incext Png2Dmp "9.Items/Boots.png"
+	#incbin "9.Items/Boots.dmp"
 
 	SetItemIcon(SolarCrest)
-	#incext Png2Dmp "9.Items/SolarCrest.png"
+	#incbin "9.Items/SolarCrest.dmp"
 
 	SetItemIcon(LunarRing)
-	#incext Png2Dmp "9.Items/LunarRing.png"
+	#incbin "9.Items/LunarRing.dmp"
 
 	SetItemIcon(AstralSigil)
-	#incext Png2Dmp "9.Items/AstralSigil.png"
+	#incbin "9.Items/AstralSigil.dmp"
 
 	SetItemIcon(Vulnerary)
-	#incext Png2Dmp "9.Items/Vulnerary.png"
+	#incbin "9.Items/Vulnerary.dmp"
 
 	SetItemIcon(Elixir)
-	#incext Png2Dmp "9.Items/Elixir.png"
+	#incbin "9.Items/Elixir.dmp"
 
 	SetItemIcon(PureWater)
-	#incext Png2Dmp "9.Items/PureWater.png"
+	#incbin "9.Items/PureWater.dmp"
 
 	SetItemIcon(Antitoxin)
-	#incext Png2Dmp "9.Items/Antitoxin.png"
+	#incbin "9.Items/Antitoxin.dmp"
 
 	SetItemIcon(Torch)
-	#incext Png2Dmp "9.Items/Torch.png"
+	#incbin "9.Items/Torch.dmp"
 
 	SetItemIcon(RedGem)
-	#incext Png2Dmp "9.Items/RedGem.png"
+	#incbin "9.Items/RedGem.dmp"
 
 	SetItemIcon(BlueGem)
-	#incext Png2Dmp "9.Items/BlueGem.png"
+	#incbin "9.Items/BlueGem.dmp"
 
 	SetItemIcon(WhiteGem)
-	#incext Png2Dmp "9.Items/WhiteGem.png"
+	#incbin "9.Items/WhiteGem.dmp"
 
 	SetItemIcon(BlackGem)
-	#incext Png2Dmp "9.Items/BlackGem.png"
+	#incbin "9.Items/BlackGem.dmp"
 
 	SetItemIcon(SilverCard)
-	#incext Png2Dmp "9.Items/SilverCard.png"
+	#incbin "9.Items/SilverCard.dmp"
 
 	SetItemIcon(MemberCard)
-	#incext Png2Dmp "9.Items/MemberCard.png"
+	#incbin "9.Items/MemberCard.dmp"
 
 POP

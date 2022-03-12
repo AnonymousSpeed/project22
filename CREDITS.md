@@ -82,6 +82,7 @@ adding yourself!
 
 - 7743: various bugfixes
 - RobertFPY, Pikmin1211, and Snakey1: Str/Mag Split Finalization
+- PhantomSentine: GroupAI 
 
 ## Icons
 

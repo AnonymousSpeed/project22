@@ -7,7 +7,7 @@
 #ifndef ItemTable
   #define ItemTable 0x809B10
 #endif
-
+#define _test_ch9_
 #ifndef DebuffTable
   #define DebuffTable     0x0203F100
   #define DebuffTableSize 0x00000440

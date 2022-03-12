@@ -22,3 +22,5 @@
 #include "FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
 
 #include "TalkAi/TalkAi.event"
+
+#include "GroupAI/GroupAI.event"
