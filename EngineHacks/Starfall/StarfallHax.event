@@ -1,3 +1,4 @@
+#include "SkipOpening.event"
 
 #include "SplitPromoItems/SplitPromoItems.event"
 

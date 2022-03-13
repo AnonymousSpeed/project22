@@ -1,13 +1,14 @@
 #include EAstdlib.event
 
 #define GEL 8 // Generic Enemy Level 
-#define GEU 0x70 
-#define NW_Treasure_A 1
-#define NW_Treasure_B 2
-#define NW_Treasure_C 3
-#define NE_Treasure 4
-#define SW_Treasure 5
-#define SE_Treasure 6
+#define GEU C9Generic // Generic Enemy UnitID 
+
+#define NW_Treasure_A SteelPike
+#define NW_Treasure_B RedGem
+#define NW_Treasure_C AstralSigil
+#define NE_Treasure   Elwind
+#define SW_Treasure   MemberCard
+#define SE_Treasure   Speedwing
 
 EventPointerTable(AssetCh09Data,ThisChapter)
 
@@ -25,7 +26,15 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 //TurnEventPlayer(0, ReinforcementsEvent, 1,255)
+TurnEventPlayer(0xA, ThiefReinforcementEvent, 3, 3)
 END_MAIN
+
+ThiefReinforcementEvent:
+LOAD1 1 ThiefUnitGroup
+ENUN
+NoFade 
+ENDA 
+
 
 ReinforcementsEvent:
 
@@ -33,8 +42,19 @@ NoFade
 ENDA 
 
 CharacterBasedEvents:
-CharacterEvent(0, EndingScene, Esme, Oldrik)
+CharacterEvent(8, Recruit_Qiu, 0, Qiu) // Anyone can talk to these people 
+CharacterEvent(9, Recruit_Mutton, 0, Mutton)
 END_MAIN
+
+Recruit_Mutton:
+CUSA Mutton 
+NoFade 
+ENDA 
+
+Recruit_Qiu: 
+CUSA Qiu
+NoFade 
+ENDA 
 
 ALIGN 4
 
@@ -47,11 +67,16 @@ Chest(SW_Treasure   , 3, 17)
 Chest(SE_Treasure   , 13, 19)
 Door(2,6)
 Door(5,6)
+SecretShop(SecretShopListC9, 20, 0)
+Seize(12, 10)
 END_MAIN
+
+SecretShopListC9:
+SHLI KillerLance KillingEdge KillerAxe KillerBow Elfire Elthunder Elwind Physic Rescue Freeze Unlock
+
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-Seize(12, 10)
 END_MAIN
 
 
@@ -81,22 +106,56 @@ UNIT 2 Paladin 0 Level(1, Ally, 0) [ 8,3] 0 0 0 0 [0,0,0,0] NoAI
 UNIT
 
 
-Enemies:
-UNIT 0x68 Deserter 0x01 	Level(GEL, Enemy, 0) [12,0] 0 0 0 0 [IronLance, IronPike] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 	Level(GEL, Enemy, 1) [11,1] 0 0 0 0 [IronAxe] BrigandAI
-UNIT 0x66 Mercenary 0x01 	Level(GEL, Enemy, 1) [12,1] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT 0x66 Deserter 0x01 	Level(GEL, Enemy, 1) [8,3] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT 0x66 Archer 0x01 		Level(GEL, Enemy, 1) [12,5] 0 0 0 0 [IronBow] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 	Level(GEL, Enemy, 0) [7,8] 0 0 0 0 [IronAxe] PursueWithoutHeedAI
-UNIT 0x66 Mercenary 0x01 	Level(GEL, Enemy, 0) [3,10] 0 0 0 0 [IronSword] PursueWithoutHeedAI
-UNIT 0x66 Deserter 0x01 	Level(GEL, Enemy, 1) [3,5] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT 0x66 Brigand 0x01 	Level(GEL, Enemy, 0) [12,9] 0 0 0 0 [IronAxe] BrigandAI
+Enemies_Right:
+UNIT GEU ThunderMage 		0 	Level(GEL, Enemy, 1) [18,2] 0 0 0 0 [Thunder] 		GroupSixAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [20,4] 0 0 0 0 [SteelBow] 		GroupSixAI
+UNIT GEU Mercenary	0 	Level(GEL, Enemy, 1) [19,8] 0 0 0 0 [SteelSword] 	GroupOneAI
+UNIT GEU Cleric 	0 	Level(GEL, Enemy, 1) [18,9] 0 0 0 0 [Physic] 			GroupOneAI
+
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [21,14] 0 0 0 0 [IronAxe] 		GroupTwoAI
+UNIT GEU FireMage 		0 	Level(GEL, Enemy, 1) [19,15] 0 0 0 0 [Fire] 		GroupTwoAI
+UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [21,17] 0 0 0 0 [IronSword] 	GroupTwoAI
+UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [18,18] 0 0 0 0 [IronAxe] 		GroupTwoAI
+
+UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [15,16] 0 0 0 0 [Javelin] StationaryBossAI
+UNIT GEU Knight 	0 	Level(GEL, Enemy, 1) [15,17] 0 0 0 0 [SteelLance, SteelPike] StationaryBossAI
+UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [14,17] 0 0 0 0 [Javelin] StationaryBossAI
+
+UNIT GEU WindMage 		0 	Level(GEL, Enemy, 1) [13,12] 0 0 0 0 [Wind] GroupFiveAI
+UNIT GEU WindMage 		0 	Level(GEL, Enemy, 1) [11,12] 0 0 0 0 [Wind] GroupFiveAI
+UNIT
+
+Enemies_Left:
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [2,4] 0 0 0 0 [SteelAxe] 	AttackInRangeAI
+UNIT GEU FireMage 		0 	Level(GEL, Enemy, 1) [5,4] 0 0 0 0 [Fire] 				AttackInRangeAI
+UNIT GEU Mercenary	0 	Level(GEL, Enemy, 1) [6,8] 0 0 0 0 [SteelSword] 				GroupThreeAI
+UNIT GEU Cleric 	0 	Level(GEL, Enemy, 1) [7,9] 0 0 0 0 [Physic] 				GroupThreeAI
+
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [1,12] 0 0 0 0 [IronBow] 		GroupFourAI
+UNIT GEU ThunderMage 		0 	Level(GEL, Enemy, 1) [3,13] 0 0 0 0 [Thunder] 	GroupFourAI
+UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [2,16] 0 0 0 0 [IronSword] 	GroupFourAI
+UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [4,18] 0 0 0 0 [IronAxe] 		GroupFourAI
+
+UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [8,12] 0 0 0 0 [Javelin] StationaryBossAI
+UNIT GEU Knight 	0 	Level(GEL, Enemy, 1) [8,13] 0 0 0 0 [KillerLance, SteelPike] StationaryBossAI
+UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [8,14] 0 0 0 0 [Javelin] StationaryBossAI
+
+UNIT C9Boss WindSage		0 	Level(GEL, Enemy, 1) [12,10] 0 0 0 0 [Tornado] StationaryBossAI
+UNIT Mutton WyvernRider 0 	Level(GEL, Enemy, 1) [8,19] 0 0 0 0 [Spear, PureWater, Vulnerary] AttackInRangeAI
+UNIT Qiu Soldier 		0 	Level(GEL, Enemy, 1) [14,6] 0 0 0 0 [SteelPike, Javelin, Vulnerary] AttackInRangeAI
+UNIT
+
+// give lockpick or something idk 
+ThiefUnitGroup:
+UNIT GEU Thief 		0 	Level(13, Enemy, 1) [10,19] DropItem 0 1 REDA9R18 [KillingEdge, Elixir] PursueWithoutHeedAI //LootOnlyThenEscapeAI
 UNIT
 
 BeginningScene:
 LOAD1 1 Units
 ENUN
-LOAD1 1 Enemies
+LOAD1 1 Enemies_Right
+ENUN
+LOAD1 1 Enemies_Left
 ENUN
 GotoPrepScreen
 NoFade
@@ -110,3 +169,5 @@ NoFade
 ENDA
 
 
+#undef GEL
+#undef GEU 

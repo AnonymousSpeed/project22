@@ -16,6 +16,7 @@
 #include "WorldMapEvents.event"
 #include "BattleEvents.event"
 #include "EscapePoints.event"
+#include "REDAHelpers.event"
 {
 	#include "C1Events.event"
 }

@@ -17,6 +17,9 @@
 #define Donny 0x11
 #define Zephyrus 0x12
 
+#define Qiu 0x13 
+#define Mutton 0x14 
+
 #define C2Boss 0x46
 #define C3Boss 0x47
 #define C4Boss 0x48
@@ -38,5 +41,9 @@
 #define C5Lumberjack 0x75
 #define C5Looter 0x76
 #define FeralStarborn 0x77
+
+
+#define C9Generic 0x80
+#define C9Boss 0x81 
 
 #define TzesarNPC 0x6F
