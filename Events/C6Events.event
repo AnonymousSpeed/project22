@@ -1,0 +1,159 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(AssetCh06Data,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, Reinforcements1, 3)
+TurnEventPlayer(0, Reinforcements1, 5)
+TurnEventPlayer(0, Reinforcements2, 7)
+TurnEventPlayer(0, Reinforcements2, 9)
+TurnEventPlayer(0, KillReinforcements, 13)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x11,Village1,13,6)
+Village(0x12,Village2,11,16)
+DOOR 0x13 [15, 1] 0x12
+DOOR 0x13 [16, 1] 0x12
+DOOR 0x14 [14, 20] 0x12
+DOOR 0x14 [15, 20] 0x12
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [2,9] 0x00 0x00 0x0 0x00 [IronLance, Soothe, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [0,8] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [0,9] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [0,10] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [0,11] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [1,8] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [1,9] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [1,10] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [1,11] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [2,8] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [2,10] 0 0 0 0 [0]     NoAI
+UNIT
+
+Donny:
+UNIT Donny Archer 0x00 Level(6, Ally, 0) [11,16] 0x0 0x0 0x1 REDA11R17 [SteelBow, Vulnerary] NoAI
+UNIT
+
+Ruya:
+UNIT Ruya Pirate 0x00 Level(5, Ally, 0) [0,0] 0x0 0x0 0x0 0x0 [IronPoleaxe, Vulnerary] NoAI
+UNIT
+
+StartEnemies:
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [3,6] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C6Generic SwordRider 0 Level(6, Enemy, True) [1,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT C6Generic Soldier 0 Level(6, Enemy, True) [6,7] 0 0 0 0 [Horseslayer] PursueWithoutHeedAI
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [4,11] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C6Generic Soldier 0 Level(6, Enemy, True) [2,13] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT C6Generic Mercenary 0 Level(6, Enemy, True) [2,13] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
+UNIT C6Generic Armor 0 Level(6, Enemy, True) [6,13] 0 0 0 0 [Javelin] StationaryBossAI
+UNIT C6Generic Soldier 0 Level(6, Enemy, True) [4,16] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT C6Generic Soldier 0 Level(6, Enemy, True) [7,3] 0 0 0 0 [IronLance] TwoActionAI
+UNIT C6Generic ThunderMage 0 Level(6, Enemy, True) [9,6] 0 0 0 0 [Thunder] AttackInRangeAI
+UNIT C6Generic Archer 0 Level(6, Enemy, True) [9,6] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT C6Generic Archer 0 Level(6, Enemy, True) [10,18] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT C6Generic SwordRider 0 Level(6, Enemy, True) [15,7] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT C6Generic AxeRider 0 Level(6, Enemy, True) [14,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C6Generic LanceRider 0 Level(6, Enemy, True) [13,13] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT C6Generic SwordRider 0 Level(6, Enemy, True) [12,12] 0 0 0 0 [Armorslayer] AttackInRangeAI
+UNIT C6Boss BowRider 0 Level(8, Enemy, True) [16,10] 0 0 0 0 [IronLongbow] AttackInRangeAI
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [11,3] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [16,16] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT C6Generic Armor 0 Level(8, Enemy, True) [15,2] DropItem 0 0 0 [Javelin, DoorKey] StationaryBossAI
+UNIT C6Generic Armor 0 Level(8, Enemy, True) [16,2] 0 0 0 0 [Javelin] StationaryBossAI
+UNIT C6Generic Armor 0 Level(8, Enemy, True) [14,19] DropItem 0 0 0 [Javelin, DoorKey] StationaryBossAI
+UNIT C6Generic Armor 0 Level(8, Enemy, True) [15,19] 0 0 0 0 [Javelin] StationaryBossAI
+UNIT
+
+Reinforcements1:
+UNIT C6Generic FireMage 0 Level(6, Enemy, True) [17,5] 0 0 1 REDA17R5 [Fire] PursueWithoutHeedAI
+UNIT C6Generic Mercenary 0 Level(6, Enemy, True) [17,11] 0 0 1 REDA17R11 [IronSword] PursueWithoutHeedAI
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [17,15] 0 0 1 REDA17R15 [IronAxw] PursueWithoutHeedAI
+UNIT
+
+Reinforcements2:
+UNIT C6Generic WindMage 0 Level(8, Enemy, True) [17,5] 0 0 1 REDA17R5 [Elwind] PursueWithoutHeedAI
+UNIT C6Generic Myrmidon 0 Level(8, Enemy, True) [17,11] 0 0 1 REDA17R11 [IronBlade] PursueWithoutHeedAI
+UNIT C6Generic Soldier 0 Level(8, Enemy, True) [17,15] 0 0 1 REDA17R15 [IronPike] PursueWithoutHeedAI
+UNIT
+
+KillReinforcements:
+UNIT C6Generic Halberdier 0 Level(5, Enemy, True) [17,5] 0 0 1 REDA17R5 [Spear] PursueWithoutHeedAI
+UNIT C6Generic Warrior 0 Level(5, Enemy, True) [17,15] 0 0 1 REDA17R15 [Tomahawk] PursueWithoutHeedAI
+UNIT
+
+BeginningScene:
+LOAD1 0x1 Units
+ENUN
+LOAD1 0x1 Ruya
+ENUN
+LOAD1 0x1 StartEnemies
+ENUN
+PREP
+ENDA
+
+EndingScene:
+MoveToChapter(6)
+ENDA
+
+//Label Location Events
+Village1:
+VillageEventItem(C2VillageText,Village,KillerAxe)
+
+Village2:
+ReinforcementEvent(Donny)
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AFEV 0x15 DoorOpen1 0x13
+AFEV 0x16 DoorOpen2 0x14
+AFEV 3 EndingScene 5
+END_MAIN
+
+DoorOpen1:
+CHECK_EVENTID 0x14
+BEQ 1 s0 sC
+ENUT 0x5
+LABEL 1
+ENDA
+
+DoorOpen2:
+CHECK_EVENTID 0x13
+BEQ 1 s0 sC
+ENUT 0x5
+LABEL 1
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

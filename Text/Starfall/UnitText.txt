@@ -69,3 +69,9 @@ Lumberjack[X]
 
 ## LooterName
 Looter[X]
+
+## RuyaName
+Ruya[X]
+
+## DonnyName
+Donny[X]
