@@ -713,6 +713,7 @@ Log Splitter[X]
 A hefty axe that ignores defense.[X]
 
 ## ChestKeyName
+<<<<<<< Updated upstream
 Chest Key[X]
 
 ## ChestKeyDesc
@@ -724,3 +725,16 @@ Door Key[X]
 ## DoorKeyDesc
 Opens doors in[N]
 adjacent spaces.[X]
+=======
+ Chest Key[X]
+
+ ## ChestKeyDesc
+ Opens chests.[X]
+
+ ## DoorKeyName
+ Door Key[X]
+
+ ## DoorKeyDesc
+ Opens doors in[N]
+ adjacent spaces.[X]
+>>>>>>> Stashed changes

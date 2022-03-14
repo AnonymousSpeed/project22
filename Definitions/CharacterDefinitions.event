@@ -23,6 +23,7 @@
 #define C2Boss 0x46
 #define C3Boss 0x47
 #define C4Boss 0x48
+#define C6Boss 0x4D
 #define Gangleader C4Boss
 #define Lycus 0x49
 #define C4SubBoss 0x4A
@@ -41,7 +42,7 @@
 #define C5Lumberjack 0x75
 #define C5Looter 0x76
 #define FeralStarborn 0x77
-
+#define C6Generic 0x78
 
 #define C9Generic 0x80
 #define C9Boss 0x81 
