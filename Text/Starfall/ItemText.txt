@@ -711,3 +711,16 @@ Log Splitter[X]
 
 ## LogSplitterDesc
 A hefty axe that ignores defense.[X]
+
+## ChestKeyName
+Chest Key[X]
+
+## ChestKeyDesc
+Opens chests.[X]
+
+## DoorKeyName
+Door Key[X]
+
+## DoorKeyDesc
+Opens doors in[N]
+adjacent spaces.[X]

@@ -141,6 +141,8 @@
 #define Antitoxin 104
 #define Torch 105
 #define SkillScroll 106
+#define ChestKey 114
+#define DoorKey 115
 
 // Sellables
 
