@@ -78,7 +78,7 @@ Restore,RestoreName,RestoreDesc,0x4af,75,Staves,IsStaff,0x0,0x0,15,0,100,0,0,0x1
 Physic,PhysicName,PhysicDesc,0x4b0,76,Staves,IsStaff,0x0,0x0,10,10,100,0,0,0x10,50,BRank,Physic,PhysicEffectID,NoEffect,4,0x0,0x0,0x0
 Fortify,FortifyName,FortifyDesc,0x4b1,77,Staves,IsStaff,0x0,0x0,5,10,100,0,0,0x10,150,ARank,Fortify,FortifyEffectID,NoEffect,5,0x0,0x0,0x0
 Freeze,FreezeName,FreezeDesc,0x4b2,78,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,250,BRank,Freeze,NoEffectID,NoEffect,5,0x0,"ItemStatus(FreezeStatusID,5)",0x0
-Numb,NumbName,NumbDesc,0x4b3,79,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,1000,BRank,Numb,NoEffectID,NoEffect,5,0x0,0x0,0x0
+Numb,NumbName,NumbDesc,0x4b3,79,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,1000,BRank,Numb,NoEffectID,NoEffect,5,0x0,"ItemStatus(NumbStatusID,5)",0x0
 Silence,SilenceName,SilenceDesc,0x4b4,80,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,200,BRank,Silence,SilenceEffectID,NoEffect,5,0x0,"ItemStatus(SilenceStatusID,5)",0x0
 Berserk,BerserkName,BerserkDesc,0x4b5,81,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,400,BRank,Berserk,BerserkEffectID,NoEffect,5,0x0,"ItemStatus(BerserkStatusID,5)",0x0
 Slow,SlowName,SlowDesc,0x4b6,82,Staves,IsStaff,0x0,0x0,5,0,100,0,0,0x10,500,BRank,Slow,NoEffectID,NoEffect,5,0x0,"ItemStatus(SlowStatusID,5)",0x0

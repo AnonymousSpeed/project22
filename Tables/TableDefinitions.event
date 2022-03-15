@@ -177,6 +177,7 @@
 #define RegenStatusID 0x10
 #define HasteStatusID 0x11
 #define SlowStatusID 0x12
+#define NumbStatusID 0x13
 #define EnfeebleStatusID 0x1F //last valid status ID
 
 //for setting what status effect 

@@ -1,0 +1,9 @@
+
+SetStatusName(NumbStatusID,NumbName)
+SetStatusDesc(NumbStatusID,NumbDesc)
+SetStatusBlinkyIconFunc(NumbStatusID,BlinkyIconFuncSilenceIcon)
+
+#include "Numb.lyn.event"
+
+NumbStatusIDLink:
+BYTE NumbStatusID
