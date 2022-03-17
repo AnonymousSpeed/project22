@@ -15,7 +15,7 @@
 	// #define ExpandedLevelUpScreen
 	
 	//Spirit Dust item icon
-	#ifndef SpiritDustIcon
+/*	#ifndef SpiritDustIcon
 		
 		#define SpiritDustIcon 0xAB
 		PUSH
@@ -24,7 +24,7 @@
 		POP
 	
 	#endif // SpiritDustIcon
-	
+*/	
 	#include "StrMagSplit/Installer.event"
 	
 	//#include "Chapter.event"

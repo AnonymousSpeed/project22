@@ -242,6 +242,8 @@
 #define JunaFruitEffectID 54
 #define LatonaEffectID 55
 #define SkillScrollEffectID 56
+#define SpiritDustEffectID 57
+#define SootheEffectID 58
 
 #endif
 
