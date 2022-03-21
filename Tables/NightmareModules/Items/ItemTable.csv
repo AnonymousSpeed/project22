@@ -47,9 +47,9 @@ SilverBow,SilverBowName,SilverBowDesc,0x0,44,Bows,IsWeapon,0x0,FlierEffectivenes
 T1KillerBow,T1KillerBowName,T1KillerBowDesc,0x0,45,Bows,IsWeapon,0x0,FlierEffectiveness|IsPointer,25,6,85,1,20,0x22,12,DRank,T1KillerBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
 KillerBow,KillerBowName,KillerBowDesc,0x0,46,Bows,IsWeapon,0x0,FlierEffectiveness|IsPointer,25,11,75,2,40,0x22,24,BRank,KillerBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
 BraveBow,BraveBowName,BraveBowDesc,0x0,47,Bows,IsWeapon|IsBrave,0x0,FlierEffectiveness|IsPointer,30,11,70,5,0,0x22,80,ARank,BraveBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
-IronLongbow,IronLongbowName,IronLongbowDesc,0x0,48,Bows,IsWeapon|IsHeavy,0x0,FlierEffectiveness|IsPointer,20,6,75,3,0,0x23,0,DRank,IronLongbow,NoEffectID,NoEffect,1,0x0,0x0,0x0
-SteelLongbow,SteelLongbowName,SteelLongbowDesc,0x0,49,Bows,IsWeapon|IsHeavy,0x0,FlierEffectiveness|IsPointer,15,10,70,4,0,0x23,70,CRank,SteelLongbow,NoEffectID,NoEffect,1,0x0,0x0,0x0
-AntiMageBow,AntiMageBowName,AntiMageBowDesc,0x0,50,Bows,IsWeapon|IsHeavy,0x0,FlierAndMageEffectiveness|IsPointer,25,9,85,2,0,0x22,250,CRank,AntiMageBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
+IronLongbow,IronLongbowName,IronLongbowDesc,0x0,48,Bows,IsWeapon,0x0,FlierEffectiveness|IsPointer,20,6,75,3,0,0x23,0,DRank,IronLongbow,NoEffectID,NoEffect,1,0x0,0x0,0x0
+SteelLongbow,SteelLongbowName,SteelLongbowDesc,0x0,49,Bows,IsWeapon,0x0,FlierEffectiveness|IsPointer,15,10,70,4,0,0x23,70,CRank,SteelLongbow,NoEffectID,NoEffect,1,0x0,0x0,0x0
+AntiMageBow,AntiMageBowName,AntiMageBowDesc,0x0,50,Bows,IsWeapon,0x0,FlierAndMageEffectiveness|IsPointer,25,9,85,2,0,0x22,250,CRank,AntiMageBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
 ArcaneBow,ArcaneBowName,ArcaneBowDesc,0x0,51,Bows,IsWeapon|IsMagic,0x0,FlierEffectiveness|IsPointer,20,8,80,2,0,0x22,80,CRank,ArcaneBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
 RapierBow,RapierBowName,RapierBowDesc,0x0,52,Bows,IsWeapon|EphraimLock,0x0,FlierEffectiveness|IsPointer,25,10,80,4,0,0x22,100,BRank,RapierBow,NoEffectID,NoEffect,1,0x0,0x0,0x0
 Thunder,ThunderName,ThunderDesc,0x0,53,ThunderType,IsWeapon|IsMagic,0x0,0x0,40,5,80,0,0,0x12,0,ERank,Thunder,NoEffectID,NoEffect,1,0x0,0x0,0x0

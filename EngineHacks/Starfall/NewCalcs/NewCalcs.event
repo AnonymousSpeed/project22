@@ -1,4 +1,0 @@
-#include "NewBattleCalcs.lyn.event"
-POIN SkillTester
-WORD ThrowBoostID
-WORD HeavyBowID

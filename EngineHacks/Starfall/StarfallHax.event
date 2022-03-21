@@ -8,7 +8,7 @@
 
 #include "Hardcoding.event"
 
-#include "NewCalcs/NewCalcs.event"
+#include "NewCalcs/NewBattleCalcs.lyn.event"
 
 #include "CustomItems/_CustomItemSetup.event"
 
