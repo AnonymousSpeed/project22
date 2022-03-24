@@ -26,6 +26,11 @@ CalcHit:
     ldsb r1, [r4, r1]
     lsl  r1, #0x1
     add  r0, r1
+    
+    @weapon triangle bonus/penalty
+    mov  r1, #0x53
+    ldsb r1, [r4, r1] 
+    add  r0, r1
 
     @store that value!
     mov  r1, #0x60
