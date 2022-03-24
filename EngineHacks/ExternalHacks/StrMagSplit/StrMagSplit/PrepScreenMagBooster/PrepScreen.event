@@ -214,8 +214,8 @@
 	//ORG 0x2F900
 	SHORT 0x385B 0x0080 0x1840 0x6800 0x4687 0x46C0 // sub r0, r0, #0x5B ; lsl r0, r0, #0x02 ; add r0, r0, r1 ; ldr r0, [ r0 ] ; mov r15, r0 ; nop.
 		// Rewrite switch jump.
-	POP
 */	
+	POP
 	ALIGN 4
 	Prep_Screen_Stat_Name_Table:
 	#incbin "PrepScreenStatNameTable.dmp"
