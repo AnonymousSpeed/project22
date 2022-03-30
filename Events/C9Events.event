@@ -114,8 +114,8 @@ UNIT GEU Cleric 	0 	Level(GEL, Enemy, 1) [18,9] 0 0 0 0 [Physic] 			GroupOneAI
 
 UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [21,14] 0 0 0 0 [IronAxe] 		GroupTwoAI
 UNIT GEU FireMage 		0 	Level(GEL, Enemy, 1) [19,15] 0 0 0 0 [Fire] 		GroupTwoAI
-UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [21,17] 0 0 0 0 [IronSword] 	GroupTwoAI
-UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [18,18] 0 0 0 0 [IronAxe] 		GroupTwoAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [21,17] 0 0 0 0 [IronSword] 	GroupTwoAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [18,18] 0 0 0 0 [IronAxe] 		GroupTwoAI
 
 UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [15,16] 0 0 0 0 [Javelin] StationaryBossAI
 UNIT GEU Knight 	0 	Level(GEL, Enemy, 1) [15,17] 0 0 0 0 [SteelLance, SteelPike] StationaryBossAI
@@ -133,8 +133,8 @@ UNIT GEU Cleric 	0 	Level(GEL, Enemy, 1) [7,9] 0 0 0 0 [Physic] 				GroupThreeAI
 
 UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [1,12] 0 0 0 0 [IronBow] 		GroupFourAI
 UNIT GEU ThunderMage 		0 	Level(GEL, Enemy, 1) [3,13] 0 0 0 0 [Thunder] 	GroupFourAI
-UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [2,16] 0 0 0 0 [IronSword] 	GroupFourAI
-UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [4,18] 0 0 0 0 [IronAxe] 		GroupFourAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [2,16] 0 0 0 0 [IronSword] 	GroupFourAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [4,18] 0 0 0 0 [IronAxe] 		GroupFourAI
 
 UNIT GEU Soldier 	0 	Level(GEL, Enemy, 1) [8,12] 0 0 0 0 [Javelin] StationaryBossAI
 UNIT GEU Knight 	0 	Level(GEL, Enemy, 1) [8,13] 0 0 0 0 [KillerLance, SteelPike] StationaryBossAI
