@@ -150,6 +150,7 @@
 #define QilinKnight_D Qilin_Knight_D
 #define Scaleguard_D 85
 #define Valkyrie_D 86
+#define Dryad 87
 
 #define Civilian_Child 109
 #define Civilian_Child_F 110

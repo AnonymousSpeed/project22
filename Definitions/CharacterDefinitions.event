@@ -20,6 +20,7 @@
 #define Qiu 0x13 
 #define Mutton 0x14 
 
+#define C1Boss 0x68 
 #define C2Boss 0x46
 #define C3Boss 0x47
 #define C4Boss 0x48
@@ -30,9 +31,12 @@
 #define Righthandman C4SubBoss
 #define Osman 0x4B
 #define Armel 0x4C
+#define C7Boss 0x4D
+#define C8Boss 0x4E
+#define C9Boss 0x81
+
 #define C1Generics 0x66
 #define C2Generics 0x67
-#define C1Boss 0x68 
 #define C3Generic 0x6E
 #define C3Generic2 0x70
 #define C4Generic 0x71
@@ -43,8 +47,10 @@
 #define C5Looter 0x76
 #define FeralStarborn 0x77
 #define C6Generic 0x78
-
+#define C7Generic 0x79 //unused atm, need to update C7events to use this and adjust
+#define C8Generic 0x7A
 #define C9Generic 0x80
-#define C9Boss 0x81 
+#define C10Generic 0x83
+
 
 #define TzesarNPC 0x6F

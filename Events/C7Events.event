@@ -73,7 +73,8 @@ UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [16,26] 0x00 0x00 0x0 0x00 [Iron
 UNIT
 
 Enemies:
-UNIT 0x4A General 0x00 Level(1, Enemy, 0) [16,19] DropItem 0x00 0x0 0x00 [IronGreatlance, Speedwing] GuardTileAI
+//boss needs to be adjusted, was previously 0x4A but that got eaten into by another chapter since these events predate the defintion list
+UNIT C7Boss General 0x00 Level(1, Enemy, 0) [16,19] DropItem 0x00 0x0 0x00 [IronGreatlance, Speedwing] GuardTileAI
 UNIT 0x66 Armor 0x4A Level(10, Enemy, 1) [15,19] 0x00 0x00 0x0 0x00 [IronLance] MoveWithLeaderAI
 UNIT 0x66 Armor 0x4A Level(10, Enemy, 1) [17,19] 0x00 0x00 0x0 0x00 [IronLance] MoveWithLeaderAI
 UNIT 0x66 Armor 0x00 Level(10, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [Javelin] GuardTileAI

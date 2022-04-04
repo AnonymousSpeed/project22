@@ -1,0 +1,182 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(AssetCh08Data,ThisChapter)
+
+#define GEL 10 //given to me, will adjust later in playtesting, likely needs to go down
+#define GEU C8Generic // Generic Enemy UnitID 
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Esme EsmeLord 0x00 Level(1, Ally, 0) [27,22] 0x00 0x00 0x0 0x00 [IronLance, Soothe, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [28,21] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [27,20] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [26,21] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [25,20] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [26,19] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [24,19] 0 0 0 0 [0]     NoAI
+UNIT Solomin Grassrunner 0 Level(2,Ally,False) [24,21] 0 0 0 0 [0]     NoAI
+//UNIT Solomin Grassrunner 0 Level(2,Ally,False) [23,20] 0 0 0 0 [0]     NoAI
+//UNIT Solomin Grassrunner 0 Level(2,Ally,False) [22,20] 0 0 0 0 [0]     NoAI
+//UNIT Solomin Grassrunner 0 Level(2,Ally,False) [21,20] 0 0 0 0 [0]     NoAI
+UNIT
+
+Group123:
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [19,10] 0 0 0 0 [SteelAxe] 		GroupOneAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [20,11] 0 0 0 0 [SteelSword] 		GroupOneAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [19,12] 0 0 0 0 [IronBlade] 		GroupOneAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [18,11] 0 0 0 0 [IronAxe, Vulnerary] 		GroupOneAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [16,10] 0 0 0 0 [SteelAxe] 		GroupTwoAI
+UNIT GEU Myrmidon 	0 	Level(GEL, Enemy, 1) [17,9] 0 0 0 0 [SteelSword] 		GroupTwoAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [16,8] 0 0 0 0 [SteelLongbow] 		GroupTwoAI
+UNIT GEU FireMage 	0 	Level(GEL, Enemy, 1) [15,9] 0 0 0 0 [Fire] 				GroupTwoAI
+UNIT GEU Dryad 		0 	Level(12, Enemy, 1) [14, 9] 0 0 0 0 [IronPike,IronGreatlance,Talisman] 		GroupTwoAI //Stealable talisman
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [22,5] 0 0 0 0 [Javelin] 		GroupThreeAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [22,4] 0 0 0 0 [SteelBow] 		GroupThreeAI
+UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [23,4] 0 0 0 0 [SteelSword] 	GroupThreeAI
+UNIT
+
+Groups456:
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [11,18] 0 0 0 0 [IronAxe] 			GroupFourAI
+UNIT GEU FireMage 	0 	Level(GEL, Enemy, 1) [11,22] 0 0 0 0 [Fire] 			GroupFourAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [10,20] 0 0 0 0 [SteelLance] 			GroupFourAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [8,20] 0 0 0 0 [SteelSword] 			GroupFourAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [9,21] 0 0 0 0 [SteelBow] 			GroupFourAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [13,6] 0 0 0 0 [HandAxe] 			GroupFiveAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [12,5] 0 0 0 0 [IronLance,Javelin] 			GroupFiveAI
+UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [11,5] 0 0 0 0 [HandAxe] 			GroupFiveAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [9,5] 0 0 0 0 [SteelBow] 			GroupFiveAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [10,3] 0 0 0 0 [Javelin] 			GroupFiveAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [6,10] 0 0 0 0 [SteelBow] 			GroupSixAI //Should 5 and 6 be further apart?
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [7,9] 0 0 0 0 [SteelSword] 			GroupSixAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [6,8] 0 0 0 0 [SteelBow] 			GroupSixAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [6,10] 0 0 0 0 [SteelBlade] 			GroupSixAI
+UNIT
+
+Southwest_Enemies:
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [15,19] 0 0 0 0 [SteelSword] 		PursueWithoutHeedAI
+UNIT GEU BowCav 	0 	Level(GEL, Enemy, 1) [12,20] 0 0 0 0 [IronBow, Vulnerary] 		PursueWithoutHeedAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [7,16] 0 0 0 0 [SteelSword] 		AttackInRangeAI
+UNIT GEU LanceCav 	0 	Level(GEL, Enemy, 1) [3,20] 1 0 0 0 [Horseslayer, IronGreatlance] 		AttackInRangeAI //Drops Weapon
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [4,22] 0 0 0 0 [SteelSword] 		AttackInRangeAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [2,20] 0 0 0 0 [SteelAxe] 		AttackInRangeAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [1,21] 0 0 0 0 [IronAxe] 		AttackInRangeAI
+UNIT GEU Troubadour 	0 	Level(7, Enemy, 1) [6,17] 0 0 0 0 [Mend] 		HealUnits
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [21,19] 0 0 0 0 [SteelLance, SteelAxe] 		PursueWithoutHeedAI
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [20,18] 0 0 0 0 [SteelLance] 		PursueWithoutHeedAI
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [5,17] 0 0 0 0 [Wingclipper] 		AttackInRangeAI
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [5,19] 0 0 0 0 [SteelLance] 		AttackInRangeAI
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [7,15] 0 0 0 0 [IronGreatlance] 		StationaryBossAI
+UNIT
+
+Center_Enemies:
+UNIT GEU Myrmidon 	0 	Level(GEL, Enemy, 1) [23,13] 0 0 0 0 [IronBlade] 		PursueWithoutHeedAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [24,13] 0 0 0 0 [BronzeLance] 		PursueWithoutHeedAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [22,14] 0 0 0 0 [IronLance] 		PursueWithoutHeedAI
+UNIT GEU AxeCav 	0 	Level(GEL, Enemy, 1) [19,14] 0 0 0 0 [IronAxe, HandAxe, Vulnerary] 		PursueWithoutHeedAI
+UNIT GEU LanceCav 	0 	Level(GEL, Enemy, 1) [20,14] 0 0 0 0 [IronLance, Javelin] 		PursueWithoutHeedAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [29,11] 0 0 0 0 [SteelLance] 		AttackInRangeAI
+UNIT GEU SwordCav 	0 	Level(GEL, Enemy, 1) [16,6] 0 0 0 0 [SteelSword] 		AttackInRangeAI
+UNIT GEU Cleric 	0 	Level(7, Enemy, 1) [16,5] 0 0 0 0 [Physic, Vulnerary] 		HealUnits
+UNIT GEU Dryad 	0 		Level(12, Enemy, 1) [2,20] 0 0 0 0 [SteelAxe] 		PursueWithoutHeedAI
+UNIT GEU Dryad 	0 	Level(12, Enemy, 1) [1,13] 0 0 0 0 [KillerAxe] 	StationaryBossAI
+//Move if can attack in 2 turns
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [0,16] 0 0 0 0 [SteelAxe, HandAxe] 	[0x00,0x06,0x00,0x00]
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [1,14] 0 0 0 0 [SteelAxe, HandAxe] 	[0x00,0x06,0x00,0x00]
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [2,12] 0 0 0 0 [SteelAxe, HandAxe] 	[0x00,0x06,0x00,0x00]
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [3,10] 0 0 0 0 [SteelAxe, HandAxe] 	[0x00,0x06,0x00,0x00]
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [25,2] 0 0 0 0 [SteelAxe, HandAxe] 		BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [25,4] 0 0 0 0 [SteelAxe] 		BrigandAI
+UNIT
+
+NW_Enemies:
+UNIT GEU Cleric 	0 	Level(12, Enemy, 1) [3,0] 1 0 0 0 [Heal] 	HealUnits
+UNIT GEU FireMage 	0 	Level(12, Enemy, 1) [2,1] 0 0 0 0 [Beastblaze, Elixir] 	AttackInRangeAI
+UNIT GEU ThunderMage 	0 	Level(12, Enemy, 1) [1,2] 1 0 0 0 [Elthunder] 	AttackInRangeAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [5,1] 0 0 0 0 [SteelPoleaxe] 	AttackInRangeAI
+UNIT GEU Fighter 	0 	Level(GEL, Enemy, 1) [6,0] 0 0 0 0 [SteelAxe] 	AttackInRangeAI
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [7,0] 0 0 0 0 [SteelSword] 	AttackInRangeAI
+UNIT GEU Deserter 	0 	Level(GEL, Enemy, 1) [8,12] 0 0 0 0 [SteelLance] 	AttackInRangeAI //Make this guy not target snags
+UNIT GEU Mercenary 	0 	Level(GEL, Enemy, 1) [11,10] 0 0 0 0 [Armorslayer] 	AttackInRangeAI
+UNIT GEU Archer 	0 	Level(GEL, Enemy, 1) [14,4] 0 0 0 0 [SteelBow] 	AttackInRangeAI
+UNIT GEU Troubadour 	0 	Level(7, Enemy, 1) [6,5] 0 0 0 0 [Mend] 	HealUnits
+UNIT GEU Pirate 	0 	Level(GEL, Enemy, 1) [8,7] 0 0 0 0 [HandAxe, Hammer] 	StationaryBossAI
+UNIT GEU 	Dryad 	0 	Level(12, Enemy, 1) [13,2] 0 0 0 0 [SteelLance] 				AttackInRangeAI
+UNIT GEU 	Dryad 	0 	Level(12, Enemy, 1) [7,3] 0 0 0 0 [Javelin] 				StationaryBossAI
+UNIT C8Boss Dryad	0 	Level(16, Enemy, 1) [3,1] 0 0 0 0 [Spear, SteelPoleaxe] 	StationaryBossAI
+UNIT
+
+Peg_Reinforcements: //Spawn on turns 9, 12, 14
+UNIT GEU PegKnight 	0 	Level(7, Enemy, 1) [25,22] 0 0 0 0 [SilverLance] 	PursueWithoutHeedAI
+UNIT GEU PegKnight 	0 	Level(7, Enemy, 1) [26,21] 0 0 0 0 [SilverLance] 	PursueWithoutHeedAI
+UNIT GEU PegKnight 	0 	Level(7, Enemy, 1) [27,20] 0 0 0 0 [SilverLance] 	PursueWithoutHeedAI
+UNIT
+
+NE_Brigand_Reinforcements: //Spawn on turns 6, 10
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [24,3] 0 0 0 0 [SteelAxe] 		BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [25,5] 0 0 0 0 [SteelAxe] 		BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [26,3] 0 0 0 0 [HandAxe] 		BrigandAI
+UNIT
+
+West_Brigand: //Spawn on turns 7, 9, 11, 13
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [1,5] 0 0 0 0 [HandAxe] 		BrigandAI
+UNIT
+
+Boss_Reinforcements: //Spawn on turns 5, 10, 11, and 25-50
+UNIT GEU BowCav 	0 	Level(12, Enemy, 1) [5,0] 0 0 0 0 [IronBow] 	PursueWithoutHeedAI
+UNIT GEU LanceCav 	0 	Level(12, Enemy, 1) [4,2] 0 0 0 0 [IronLance] 	PursueWithoutHeedAI
+UNIT
+
+Super_Brigands: //Spawn on turn 10, but do not appear if all villages have been visited.
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [1,4] 0 0 0 0 [SteelAxe] 		BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [2,5] 0 0 0 0 [IronPoleaxe] 	BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [1,6] 1 0 0 0 [T1KillerAxe] 	BrigandAI
+UNIT GEU Brigand 	0 	Level(GEL, Enemy, 1) [1,7] 0 0 0 0 [SteelAxe] 		BrigandAI
+UNIT
+
+BeginningScene:
+ENDA
+
+EndingScene:
+MoveToChapter(8)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

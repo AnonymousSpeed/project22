@@ -63,11 +63,11 @@ UNIT Solomin Grassrunner 0 Level(2,Ally,False) [2,8] 0 0 0 0 [0]     NoAI
 UNIT Solomin Grassrunner 0 Level(2,Ally,False) [2,10] 0 0 0 0 [0]     NoAI
 UNIT
 
-Donny:
+DonnyUnit:
 UNIT Donny Archer 0x00 Level(6, Ally, 0) [11,16] 0x0 0x0 0x1 REDA11R17 [SteelBow, Vulnerary] NoAI
 UNIT
 
-Ruya:
+RuyaUnit:
 UNIT Ruya Pirate 0x00 Level(5, Ally, 0) [0,0] 0x0 0x0 0x0 0x0 [IronPoleaxe, Vulnerary] NoAI
 UNIT
 
@@ -100,7 +100,7 @@ UNIT
 Reinforcements1:
 UNIT C6Generic FireMage 0 Level(6, Enemy, True) [17,5] 0 0 1 REDA17R5 [Fire] PursueWithoutHeedAI
 UNIT C6Generic Mercenary 0 Level(6, Enemy, True) [17,11] 0 0 1 REDA17R11 [IronSword] PursueWithoutHeedAI
-UNIT C6Generic Fighter 0 Level(6, Enemy, True) [17,15] 0 0 1 REDA17R15 [IronAxw] PursueWithoutHeedAI
+UNIT C6Generic Fighter 0 Level(6, Enemy, True) [17,15] 0 0 1 REDA17R15 [IronAxe] PursueWithoutHeedAI
 UNIT
 
 Reinforcements2:
@@ -117,7 +117,7 @@ UNIT
 BeginningScene:
 LOAD1 0x1 Units
 ENUN
-LOAD1 0x1 Ruya
+LOAD1 0x1 RuyaUnit
 ENUN
 LOAD1 0x1 StartEnemies
 ENUN
@@ -133,7 +133,7 @@ Village1:
 VillageEventItem(C2VillageText,Village,KillerAxe)
 
 Village2:
-ReinforcementEvent(Donny)
+ReinforcementEvent(DonnyUnit)
 
 MiscBasedEvents:
 CauseGameOverIfLordDies

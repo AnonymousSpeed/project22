@@ -32,14 +32,16 @@
 {
 	#include "C5Events.event"
 }
-
-
+{
+	#include "C6Events.event"
+}
 
 {
 	#include "C7Events.event"
 }
-
-
+{
+	#include "C8Events.event"
+}
 
 {
 	#include "C9Events.event"
